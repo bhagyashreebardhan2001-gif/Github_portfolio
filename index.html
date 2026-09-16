@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Field Portfolio \u2014 Geospatial &amp; Remote Sensing</title>
+<title>Field Portfolio — Geospatial &amp; Remote Sensing</title>
 
 <!-- Fonts: Fraunces (display serif) + IBM Plex Sans (body) + IBM Plex Mono (data/labels) -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -229,6 +229,21 @@
     color: #3a4438;
   }
   .modal-tags { margin: 0.9rem 0; }
+  .modal-takeaway {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #2B4D39;
+    background: #EFF3EA;
+    border-left: 2px solid #3D6B4F;
+    padding: 0.6rem 0.9rem;
+    margin-top: 0.9rem;
+  }
+  .modal-takeaway__label {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.72rem;
+    color: #B75B2E;
+  }
   .modal-embed {
     margin: 1rem 0;
     border: 1px solid #D8DCC9;
@@ -300,39 +315,43 @@
 <body class="font-body">
 
   <!-- ============================================================ -->
-  <!-- SECTION 1 \u2014 HERO -->
+  <!-- SECTION 1 — HERO -->
   <!-- ============================================================ -->
   <header class="contour-field min-h-screen flex items-center px-6 md:px-16 py-20">
     <div class="max-w-6xl mx-auto w-full grid md:grid-cols-5 gap-12 items-center">
 
       <div class="md:col-span-3">
-        <p class="font-mono text-xs text-clay tracking-wide mb-4">field portfolio \u2014 semesters 1\u20133</p>
+        <p class="font-mono text-xs text-clay tracking-wide mb-4">geoinformatics portfolio — semesters 1–3</p>
         <h1 class="font-display text-5xl md:text-6xl leading-[1.05] text-ink">
-          Bhagyashree<br />Reading the land<br />through satellite eyes.
+          Hi, I'm Bhagyashree.
         </h1>
-        <p class="font-body text-inksoft mt-6 max-w-md text-[0.98rem] leading-relaxed">
-          Environmental science student working in remote sensing and geospatial
-          analysis \u2014 building classification models, drought and vegetation
-          monitors, and interactive map applications with Google Earth Engine.
+        <p class="font-body text-ink mt-4 max-w-md text-lg">
+          Mapping cities from space \u2014 GIS \u00b7 Remote Sensing \u00b7 Urban Analysis
+        </p>
+        <p class="font-body text-inksoft mt-4 max-w-md text-[0.98rem] leading-relaxed">
+          I'm a geoinformatics student based in Maharashtra, passionate about
+          turning satellite data into stories about cities, heat, and movement.
         </p>
 
         <div class="flex flex-wrap gap-2 mt-6">
           <span class="tag">Google Earth Engine</span>
           <span class="tag">Python</span>
-          <span class="tag">Remote Sensing</span>
           <span class="tag">GIS</span>
+          <span class="tag">Urban Analysis</span>
         </div>
 
         <div class="mt-12 flex flex-col items-start">
-          <a href="#about" aria-label="Scroll to About section" class="scroll-cue" title="Scroll"></a>
-          <span class="font-mono text-[0.65rem] text-inksoft mt-2">scroll</span>
+          <a href="#about" aria-label="Explore my work" class="scroll-cue" title="Explore my work"></a>
+          <span class="font-mono text-[0.65rem] text-inksoft mt-2">explore my work</span>
         </div>
       </div>
 
-      <div class="md:col-span-2 flex justify-center md:justify-end">
-        <div class="specimen-frame w-56 h-56 md:w-64 md:h-64 flex flex-col items-center justify-center bg-panel">
-          <span class="font-display text-6xl text-forest">B</span>
-          <span class="font-mono text-[0.62rem] text-inksoft mt-3 tracking-wide">18.52\u00b0N, 73.86\u00b0E</span>
+      <div class="md:col-span-2 flex flex-col items-center md:items-end">
+        <div class="specimen-frame w-60 md:w-72 aspect-[3/4] overflow-hidden bg-panel">
+          <img src="profile.jpg" alt="Portrait of Bhagyashree" class="w-full h-full object-cover" />
+        </div>
+        <div class="mt-3 flex flex-col items-center md:items-end">
+          <span class="font-mono text-[0.62rem] text-inksoft tracking-wide">18.52°N, 73.86°E</span>
           <span class="font-mono text-[0.62rem] text-clay">PUNE, IN</span>
         </div>
       </div>
@@ -341,7 +360,7 @@
   </header>
 
   <!-- ============================================================ -->
-  <!-- SECTION 2 \u2014 ABOUT -->
+  <!-- SECTION 2 — ABOUT -->
   <!-- ============================================================ -->
   <section id="about" class="px-6 md:px-16 py-24 border-t border-hairline">
     <div class="max-w-6xl mx-auto grid md:grid-cols-5 gap-12">
@@ -349,34 +368,34 @@
       <div class="md:col-span-3">
         <h2 class="font-display text-3xl text-ink mb-6">About</h2>
         <p class="font-body text-inksoft leading-relaxed mb-4">
-          I study environmental science with a focus on how satellite data can
-          be turned into practical, decision-ready information \u2014 vegetation
-          health, drought risk, land cover change, and canopy structure. Most of
-          my work lives inside Google Earth Engine, moving from raw multi-sensor
-          imagery to spatial statistics and dashboards that someone outside the
-          notebook can actually read.
+          I'm a geoinformatics student and early-career researcher, still early
+          in figuring out exactly where I want to specialize \u2014 but consistently
+          pulled back toward the same question: what is satellite data actually
+          telling us about how cities live, breathe, and heat up? GIS and remote
+          sensing drew me in because they turn something as abstract as a
+          satellite pass into a map someone can point at and understand.
         </p>
         <p class="font-body text-inksoft leading-relaxed">
-          Across three semesters, that's meant fusing Sentinel-2, Landsat, MODIS,
-          and GEDI data; debugging the quirks of the GEE App environment; and
-          packaging results as companion websites rather than leaving them in a
-          script. This portfolio is organized the way the work actually happened
-          \u2014 by semester, by place.
+          I enjoy building reproducible workflows in Python, QGIS, and Google
+          Earth Engine, and turning messy multi-sensor imagery into clear maps
+          and honest statistics \u2014 not just a script that ran once on my machine.
+          This portfolio is organized the way the work actually happened, by
+          semester, by place.
         </p>
       </div>
 
       <div class="md:col-span-2">
         <h3 class="font-mono text-xs text-inksoft mb-3">core skills</h3>
         <div class="flex flex-wrap gap-2">
-          <span class="tag">Sentinel-2</span>
-          <span class="tag">Landsat 8/9</span>
-          <span class="tag">MODIS</span>
+          <span class="tag">GIS & Spatial Analysis</span>
+          <span class="tag">Satellite Remote Sensing</span>
+          <span class="tag">Urban Heat & LST</span>
+          <span class="tag">Building Footprint Extraction</span>
+          <span class="tag">Python</span>
+          <span class="tag">QGIS</span>
+          <span class="tag">Google Earth Engine</span>
+          <span class="tag">ICESat-2</span>
           <span class="tag">GEDI LiDAR</span>
-          <span class="tag">Random Forest</span>
-          <span class="tag">NDVI / Drought Indices</span>
-          <span class="tag">Shapefiles / GeoJSON</span>
-          <span class="tag">JavaScript (GEE)</span>
-          <span class="tag">Dashboard Design</span>
         </div>
       </div>
 
@@ -384,7 +403,7 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- SECTION 3 \u2014 GLOBE + PROJECTS -->
+  <!-- SECTION 3 — GLOBE + PROJECTS -->
   <!-- ============================================================ -->
   <section id="projects" class="px-6 md:px-16 py-24 border-t border-hairline bg-panel">
     <div class="max-w-6xl mx-auto">
@@ -403,15 +422,15 @@
           <div class="flex border border-hairline mb-4" role="tablist" aria-label="Semester">
             <button type="button" data-semester-tab="semester1" role="tab" aria-selected="true"
               class="tab-active flex-1 font-mono text-xs px-3 py-3 border-r border-hairline text-inksoft">
-              01 \u2014 Sem 1
+              01 — Sem 1
             </button>
             <button type="button" data-semester-tab="semester2" role="tab" aria-selected="false"
               class="flex-1 font-mono text-xs px-3 py-3 border-r border-hairline text-inksoft">
-              02 \u2014 Sem 2
+              02 — Sem 2
             </button>
             <button type="button" data-semester-tab="semester3" role="tab" aria-selected="false"
               class="flex-1 font-mono text-xs px-3 py-3 text-inksoft">
-              03 \u2014 Sem 3
+              03 — Sem 3
             </button>
           </div>
 
@@ -423,7 +442,7 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- SECTION 4 \u2014 FIELDWORK / LAB / CO-CURRICULARS -->
+  <!-- SECTION 4 — FIELDWORK / LAB / CO-CURRICULARS -->
   <!-- ============================================================ -->
   <section id="fieldwork" class="px-6 md:px-16 py-24 border-t border-hairline">
     <div class="max-w-6xl mx-auto">
@@ -433,42 +452,42 @@
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
         <figure class="gallery-frame">
           <img src="https://placehold.co/480x360/e9edd9/2b4d39?text=Field+Survey" alt="Field survey placeholder photo" />
-          <figcaption class="gallery-caption">soil sampling, transect survey</figcaption>
+          <figcaption class="gallery-caption">collecting ground-truth points for land-cover mapping in Pune</figcaption>
         </figure>
         <figure class="gallery-frame">
           <img src="https://placehold.co/480x600/e9edd9/2b4d39?text=Lab+Analysis" alt="Laboratory analysis placeholder photo" />
-          <figcaption class="gallery-caption">lab \u2014 water quality analysis</figcaption>
+          <figcaption class="gallery-caption">running land-surface temperature models in Python</figcaption>
         </figure>
         <figure class="gallery-frame">
           <img src="https://placehold.co/480x360/e9edd9/2b4d39?text=Drone+Flight" alt="Drone survey placeholder photo" />
-          <figcaption class="gallery-caption">UAV imagery acquisition</figcaption>
+          <figcaption class="gallery-caption">flying a UAV survey for high-resolution imagery</figcaption>
         </figure>
         <figure class="gallery-frame">
           <img src="https://placehold.co/480x360/e9edd9/2b4d39?text=GIS+Workshop" alt="GIS workshop placeholder photo" />
-          <figcaption class="gallery-caption">GIS mapping workshop</figcaption>
+          <figcaption class="gallery-caption">a weekend spent in a GIS mapping workshop</figcaption>
         </figure>
         <figure class="gallery-frame">
           <img src="https://placehold.co/480x600/e9edd9/2b4d39?text=Field+Notebook" alt="Field notebook placeholder photo" />
-          <figcaption class="gallery-caption">field notebook, species log</figcaption>
+          <figcaption class="gallery-caption">my field notebook, mid-survey</figcaption>
         </figure>
         <figure class="gallery-frame">
           <img src="https://placehold.co/480x360/e9edd9/2b4d39?text=Conference" alt="Conference presentation placeholder photo" />
-          <figcaption class="gallery-caption">student research presentation</figcaption>
+          <figcaption class="gallery-caption">presenting our urban heat findings on campus</figcaption>
         </figure>
       </div>
 
       <div class="grid md:grid-cols-3 gap-8 border-t border-hairline pt-10">
         <div>
           <h3 class="font-mono text-xs text-clay mb-2">problem-solving</h3>
-          <p class="font-body text-sm text-inksoft leading-relaxed">Debugging memory limits, permission errors, and API quirks in GEE has meant learning to isolate a failure before reaching for a fix \u2014 patience over guesswork.</p>
+          <p class="font-body text-sm text-inksoft leading-relaxed">Debugging memory limits and API quirks in GEE has taught me to isolate a failure before reaching for a fix \u2014 patience over guesswork.</p>
         </div>
         <div>
           <h3 class="font-mono text-xs text-clay mb-2">collaboration</h3>
-          <p class="font-body text-sm text-inksoft leading-relaxed">Fieldwork is rarely solo \u2014 coordinating sampling schedules, sharing GEE assets, and translating technical output for non-technical audiences.</p>
+          <p class="font-body text-sm text-inksoft leading-relaxed">Fieldwork is rarely solo for me \u2014 coordinating sampling schedules and translating technical output for people outside GIS.</p>
         </div>
         <div>
-          <h3 class="font-mono text-xs text-clay mb-2">dedication</h3>
-          <p class="font-body text-sm text-inksoft leading-relaxed">Multi-year pipelines and repeat field visits reward consistency \u2014 showing up for the unglamorous parts of long-running datasets.</p>
+          <h3 class="font-mono text-xs text-clay mb-2">curiosity</h3>
+          <p class="font-body text-sm text-inksoft leading-relaxed">Cities and the data they generate keep pulling me back in \u2014 there's always one more layer worth mapping.</p>
         </div>
       </div>
     </div>
@@ -477,7 +496,7 @@
   <!-- Footer -->
   <footer class="px-6 md:px-16 py-12 border-t border-hairline">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-      <span class="font-mono text-xs text-inksoft">Bhagyashree \u2014 Bharati Vidyapeeth IEER, Pune</span>
+      <span class="font-mono text-xs text-inksoft">Bhagyashree — Bharati Vidyapeeth IEER, Pune</span>
       <div class="flex gap-4 font-mono text-xs text-inksoft">
         <a href="mailto:your-email@example.com" class="hover:text-ink">email</a>
         <a href="https://github.com/your-username" class="hover:text-ink" target="_blank" rel="noopener">github</a>
@@ -489,7 +508,7 @@
   <!-- Project modal -->
   <div id="projectModal">
     <div class="modal-panel">
-      <button id="modalClose" class="modal-close" aria-label="Close">\u2715</button>
+      <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
       <div id="projectModalBody"></div>
     </div>
   </div>
