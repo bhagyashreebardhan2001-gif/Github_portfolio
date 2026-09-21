@@ -385,7 +385,7 @@
   .earth-grid-lines{position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(90deg,transparent 0 14%,rgba(238,243,246,.2) 14.3% 14.7%);opacity:.45}
   .earth-glow{position:absolute;width:54%;aspect-ratio:1;left:23%;top:23%;border-radius:50%;background:rgba(14,124,144,.18);filter:blur(28px)}
   .orbit{position:absolute;left:4%;top:22%;width:92%;height:56%;border:1px solid rgba(14,124,144,.23);border-radius:50%;transform:rotate(-19deg)}.orbit-two{left:14%;top:8%;width:72%;height:82%;transform:rotate(35deg);border-color:rgba(183,91,46,.16)}.orbit-three{left:-5%;top:34%;width:110%;height:32%;transform:rotate(8deg);border-color:rgba(22,35,44,.1)}
-  .satellite-flight{position:absolute;width:180px;height:100px;left:8%;top:5%;z-index:5;transform-origin:50% 50%;filter:drop-shadow(0 18px 18px rgba(22,35,44,.12))}.satellite-svg-wrap{width:100%;height:100%}.satellite-svg-wrap svg{width:100%;height:100%;display:block}.satellite-trail{position:absolute;width:170px;height:1px;right:92%;top:50%;transform:rotate(17deg);transform-origin:right center;background:linear-gradient(90deg,transparent,rgba(14,124,144,.45));opacity:.8}
+  .satellite-flight{display:none;position:absolute;width:180px;height:100px;left:8%;top:5%;z-index:5;transform-origin:50% 50%;filter:drop-shadow(0 18px 18px rgba(22,35,44,.12))}.satellite-svg-wrap{width:100%;height:100%}.satellite-svg-wrap svg{width:100%;height:100%;display:block}.satellite-trail{position:absolute;width:170px;height:1px;right:92%;top:50%;transform:rotate(17deg);transform-origin:right center;background:linear-gradient(90deg,transparent,rgba(14,124,144,.45));opacity:.8}
   .coordinate-label{position:absolute;right:9%;bottom:10%;font:500 .63rem "IBM Plex Mono",monospace;letter-spacing:.08em;color:var(--flight-teal);border-left:2px solid var(--flight-clay);padding-left:9px}
   .portrait-card{position:absolute;width:clamp(155px,14vw,210px);right:7%;bottom:10%;padding:7px;background:#fff;box-shadow:0 20px 50px rgba(22,35,44,.1);transform:rotate(3deg);z-index:8}.portrait-card img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}.portrait-label{display:flex;justify-content:space-between;gap:8px;padding:9px 4px 2px;font:500 .53rem "IBM Plex Mono",monospace;color:var(--flight-muted)}.portrait-label strong{color:var(--flight-ink)}
   .hero-bottom{position:absolute;z-index:12;left:clamp(24px,5vw,72px);right:clamp(24px,5vw,72px);bottom:28px;display:grid;grid-template-columns:1fr 1fr 1fr;align-items:end;font:500 .6rem "IBM Plex Mono",monospace;letter-spacing:.07em;color:var(--flight-muted)}.scroll-prompt{display:flex;align-items:center;gap:11px}.scroll-line{width:38px;height:1px;background:var(--flight-teal)}.hero-status{text-align:center}.status-pulse{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--flight-teal);margin-right:6px;box-shadow:0 0 0 5px rgba(14,124,144,.08)}.hero-status b{color:var(--flight-clay);padding:0 5px}.hero-progress{display:flex;align-items:center;justify-content:flex-end;gap:10px}.hero-progress div{width:90px;height:1px;background:var(--flight-line);position:relative}.hero-progress i{display:block;width:12%;height:2px;background:var(--flight-teal);transform-origin:left center}
@@ -395,10 +395,117 @@
   @media(max-width:560px){.hero-flight{min-height:180vh}.hero-copy{top:34%;left:22px;width:calc(100% - 44px)}.hero-description{font-size:.86rem}.hero-meta{gap:13px}.orbital-system{top:58%;right:-34vw;width:105vw;height:105vw}.portrait-card{width:125px;right:8px;bottom:7%}.coordinate-label{display:none}.site-nav{height:70px}.nav-index{font-size:.58rem}.hero-bottom{bottom:17px}}
   @media(prefers-reduced-motion:reduce){.hero-flight{min-height:100vh}.hero-flight-pin{height:100vh}.satellite-flight{transform:none!important}.orbit{animation:none!important}}
 
+
+  /* ============================================================
+     GLOBAL SATELLITE ROUTE — one vehicle, entire portfolio
+     ============================================================ */
+  .global-satellite{
+    position:fixed;left:0;top:0;width:clamp(145px,16vw,255px);height:auto;z-index:80;
+    pointer-events:none;will-change:transform,opacity;transform:translate3d(0,0,0);
+    filter:drop-shadow(0 20px 22px rgba(22,35,44,.12));
+  }
+  .global-sat-svg{display:block;width:100%;height:auto;overflow:visible;transform-origin:50% 50%;}
+  .global-sat-aura{position:absolute;inset:18% 16%;border-radius:50%;background:radial-gradient(circle,rgba(14,124,144,.13),transparent 65%);filter:blur(9px);}
+  .global-sat-trail{position:absolute;height:2px;left:-75%;top:53%;transform-origin:right center;border-radius:99px;pointer-events:none;}
+  .global-sat-trail-a{width:105%;background:linear-gradient(90deg,transparent,rgba(14,124,144,.08),rgba(14,124,144,.5));}
+  .global-sat-trail-b{width:62%;top:58%;left:-44%;height:1px;background:linear-gradient(90deg,transparent,rgba(183,91,46,.3));}
+  .global-sat-readout{position:absolute;right:-4px;top:100%;margin-top:5px;display:flex;gap:7px;align-items:center;font:500 8px/1 "IBM Plex Mono",monospace;letter-spacing:.08em;color:#62727d;white-space:nowrap;background:rgba(255,255,255,.82);border:1px solid #d7e0e6;padding:5px 7px;border-radius:999px;backdrop-filter:blur(8px);box-shadow:0 5px 18px rgba(22,35,44,.06)}
+  .global-sat-readout b{color:#0e7c90;font-weight:500}
+  .sat-engine-glow{animation:satPulse 1.15s ease-in-out infinite alternate;transform-origin:center;}
+  @keyframes satPulse{from{opacity:.45;transform:scale(.86)}to{opacity:.95;transform:scale(1.12)}}
+  .satellite-route-marker{position:fixed;right:22px;top:50%;z-index:30;transform:translateY(-50%);font:500 9px/1.4 "IBM Plex Mono",monospace;color:#62727d;letter-spacing:.08em;writing-mode:vertical-rl;display:flex;align-items:center;gap:9px;pointer-events:none;}
+  .satellite-route-marker::before{content:"";display:block;width:1px;height:74px;background:linear-gradient(to bottom,transparent,#0e7c90,transparent)}
+  @media(max-width:700px){
+    .global-satellite{width:128px;}
+    .global-sat-readout{font-size:7px;}
+    .satellite-route-marker{right:7px;font-size:7px;}
+    .satellite-route-marker::before{height:46px}
+  }
+  @media(prefers-reduced-motion:reduce){.global-satellite{display:none}.satellite-route-marker{display:none}}
+
 </style>
 </head>
 
 <body class="font-body">
+  <!-- GLOBAL SATELLITE — follows the user through the entire portfolio -->
+  <div id="globalSatellite" class="global-satellite" aria-hidden="true">
+    <div class="global-sat-aura"></div>
+    <div class="global-sat-trail global-sat-trail-a"></div>
+    <div class="global-sat-trail global-sat-trail-b"></div>
+    <svg class="global-sat-svg" viewBox="0 0 300 170" role="img" aria-label="Orbiting satellite">
+      <defs>
+        <linearGradient id="gSatBody" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#ffffff"/>
+          <stop offset="0.55" stop-color="#dce7eb"/>
+          <stop offset="1" stop-color="#9bb4bd"/>
+        </linearGradient>
+        <linearGradient id="gSatPanel" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#183944"/>
+          <stop offset="0.5" stop-color="#276878"/>
+          <stop offset="1" stop-color="#102a34"/>
+        </linearGradient>
+        <linearGradient id="gSatEdge" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#b75b2e"/>
+          <stop offset="1" stop-color="#0e7c90"/>
+        </linearGradient>
+        <filter id="gSatShadow" x="-40%" y="-40%" width="180%" height="180%">
+          <feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#16232c" flood-opacity=".22"/>
+        </filter>
+        <filter id="gSatGlow" x="-100%" y="-100%" width="300%" height="300%">
+          <feGaussianBlur stdDeviation="5"/>
+        </filter>
+      </defs>
+      <g filter="url(#gSatShadow)">
+        <!-- left solar wing -->
+        <g transform="skewY(-7)">
+          <rect x="9" y="63" width="76" height="39" rx="4" fill="url(#gSatPanel)" stroke="#0b5c6c" stroke-width="2"/>
+          <path d="M24 63v39M39 63v39M54 63v39M69 63v39" stroke="#a7d0d8" stroke-width="1" opacity=".58"/>
+          <path d="M9 76h76M9 89h76" stroke="#a7d0d8" stroke-width="1" opacity=".35"/>
+        </g>
+        <!-- right solar wing -->
+        <g transform="skewY(7)">
+          <rect x="215" y="63" width="76" height="39" rx="4" fill="url(#gSatPanel)" stroke="#0b5c6c" stroke-width="2"/>
+          <path d="M230 63v39M245 63v39M260 63v39M275 63v39" stroke="#a7d0d8" stroke-width="1" opacity=".58"/>
+          <path d="M215 76h76M215 89h76" stroke="#a7d0d8" stroke-width="1" opacity=".35"/>
+        </g>
+        <!-- solar wing hinges -->
+        <circle cx="88" cy="82" r="6" fill="#d9e5e8" stroke="#16232c" stroke-width="2"/>
+        <circle cx="212" cy="82" r="6" fill="#d9e5e8" stroke="#16232c" stroke-width="2"/>
+        <!-- main satellite bus -->
+        <rect x="91" y="48" width="118" height="67" rx="13" fill="url(#gSatBody)" stroke="#16232c" stroke-width="3"/>
+        <path d="M103 59h94v45h-94z" fill="#eef3f6" opacity=".72"/>
+        <path d="M103 59h94" stroke="#fff" stroke-width="4" opacity=".72"/>
+        <path d="M103 104h94" stroke="#718c97" stroke-width="2" opacity=".65"/>
+        <!-- central equipment / camera -->
+        <rect x="124" y="63" width="52" height="35" rx="7" fill="#16232c"/>
+        <rect x="132" y="70" width="36" height="22" rx="4" fill="#0e7c90"/>
+        <circle cx="150" cy="81" r="9" fill="#b7dbe1" opacity=".9"/>
+        <circle cx="150" cy="81" r="5" fill="#315967"/>
+        <circle cx="147" cy="78" r="2" fill="#fff" opacity=".8"/>
+        <!-- top antenna -->
+        <path d="M150 48V27" stroke="#16232c" stroke-width="3"/>
+        <path d="M139 28h22" stroke="#b75b2e" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="150" cy="22" r="7" fill="#b75b2e" stroke="#fff" stroke-width="3"/>
+        <!-- dish -->
+        <path d="M181 48q17-23 34 0q-17 9-34 0z" fill="#fff" stroke="#16232c" stroke-width="2"/>
+        <path d="M190 47l12-11" stroke="#0e7c90" stroke-width="2"/>
+        <!-- underside sensor boom -->
+        <path d="M150 115v21" stroke="#16232c" stroke-width="3"/>
+        <path d="M137 136h26l-5 9h-16z" fill="#0e7c90" stroke="#16232c" stroke-width="2"/>
+        <!-- tiny attitude thrusters -->
+        <circle cx="103" cy="112" r="4" fill="#b75b2e"/>
+        <circle cx="197" cy="112" r="4" fill="#b75b2e"/>
+      </g>
+      <!-- propulsion glow -->
+      <g class="sat-engine-glow" filter="url(#gSatGlow)">
+        <ellipse cx="93" cy="109" rx="12" ry="5" fill="#b75b2e" opacity=".65"/>
+        <ellipse cx="207" cy="109" rx="12" ry="5" fill="#0e7c90" opacity=".55"/>
+      </g>
+    </svg>
+    <div class="global-sat-readout"><span>ORBITAL LINK</span><b id="satProgress">00%</b></div>
+  </div>
+  <div class="satellite-route-marker"><span>BHAGYASHREE / EARTH OBSERVATION</span></div>
+
   <!-- ============================================================ -->
   <!-- CINEMATIC HERO / SATELLITE FLIGHT -->
   <!-- ============================================================ -->
@@ -660,89 +767,113 @@
 
 <script>
 (function(){
-  function initSatelliteFlight(){
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    if (!window.gsap || !window.ScrollTrigger) return;
-    gsap.registerPlugin(ScrollTrigger);
-
-    const hero = document.querySelector('.hero-flight');
-    const pin = document.querySelector('.hero-flight-pin');
-    const sat = document.querySelector('#satelliteFlight');
-    const earth = document.querySelector('.earth-disc');
-    const glow = document.querySelector('.earth-glow');
-    const copy = document.querySelector('.hero-copy');
-    const portrait = document.querySelector('.portrait-card');
-    const label = document.querySelector('.coordinate-label');
-    const progress = document.querySelector('.hero-progress i');
-    if(!hero || !pin || !sat) return;
-
-    // The hero is pinned while the user scrolls through 110vh of flight space.
-    // This makes the satellite movement directly tied to scroll position.
-    const flight = gsap.timeline({
-      defaults:{ease:'none'},
-      scrollTrigger:{
-        id:'satellite-flight',
-        trigger:hero,
-        start:'top top',
-        end:'bottom bottom',
-        scrub:1.15,
-        pin:pin,
-        pinSpacing:false,
-        invalidateOnRefresh:true
-      }
-    });
-
-    // 0 → 25%: satellite launches from the orbital ring.
-    flight.to(sat,{x:'-10vw',y:'7vh',rotation:-16,scale:.93,duration:.18},0);
-    // 25 → 55%: long diagonal crossing, with a clear rotation.
-    flight.to(sat,{x:'22vw',y:'-18vh',rotation:42,scale:.78,duration:.27},.18);
-    // 55 → 78%: it swings toward the next section and gets smaller.
-    flight.to(sat,{x:'38vw',y:'25vh',rotation:118,scale:.55,duration:.23},.45);
-    // 78 → 100%: it flies away toward the next section.
-    flight.to(sat,{x:'58vw',y:'67vh',rotation:190,scale:.16,opacity:.05,duration:.22},.68);
-
-    // Supporting cinematic motion makes the satellite's trajectory easier to read.
-    flight.to(earth,{scale:.84,rotation:-12,opacity:.76,duration:.42},0);
-    flight.to(glow,{scale:.72,opacity:.2,duration:.5},0);
-    flight.to(copy,{x:'-10vw',y:'-4vh',opacity:.18,duration:.48},.18);
-    flight.to(portrait,{x:'7vw',y:'-5vh',rotation:-4,opacity:.38,duration:.45},.35);
-    flight.to(label,{x:'9vw',y:'-4vh',opacity:0,duration:.32},.56);
-    flight.to(progress,{scaleX:1,duration:1},0);
-
-    // A small tilt follows the satellite's direction without fighting scrub.
-    gsap.to('.satellite-svg-wrap',{rotation:-8,transformOrigin:'50% 50%',duration:2.2,yoyo:true,repeat:-1,ease:'sine.inOut'});
-
-    // Keep ScrollTrigger synchronized with Lenis.
-    if(window.lenis){
-      window.lenis.on('scroll', ScrollTrigger.update);
-    }
-    ScrollTrigger.refresh();
-  }
+  if(!window.gsap || !window.ScrollTrigger) return;
+  gsap.registerPlugin(ScrollTrigger);
 
   function initLenis(){
     if(!window.Lenis) return;
     const lenis = new Lenis({
-      duration:1.15,
+      duration:1.05,
       smoothWheel:true,
       wheelMultiplier:.82,
       touchMultiplier:1.05,
       anchors:true
     });
-    window.lenis = lenis;
+    window.lenis=lenis;
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add((time)=>lenis.raf(time*1000));
     gsap.ticker.lagSmoothing(0);
   }
 
-  function boot(){
-    if(!window.gsap || !window.ScrollTrigger || !window.Lenis){
-      setTimeout(boot,80);
+  function initGlobalSatellite(){
+    const sat=document.getElementById('globalSatellite');
+    const svg=sat && sat.querySelector('.global-sat-svg');
+    const pct=document.getElementById('satProgress');
+    if(!sat || !svg) return;
+
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+      sat.style.display='none';
       return;
     }
-    initLenis();
-    initSatelliteFlight();
+
+    // Each point is a visual waypoint in viewport coordinates.
+    // The satellite therefore keeps flying while the actual portfolio sections move underneath it.
+    const points=[
+      {p:0.00,x:.76,y:.20,r:-12,s:1.00}, // HERO
+      {p:0.11,x:.18,y:.72,r:24,s:.92},  // ABOUT
+      {p:0.23,x:.80,y:.22,r:55,s:.84},  // PROJECT GLOBE
+      {p:0.35,x:.25,y:.78,r:88,s:.78},  // SEMESTER 1
+      {p:0.48,x:.82,y:.46,r:128,s:.70}, // SEMESTER 2
+      {p:0.61,x:.16,y:.28,r:166,s:.64}, // SEMESTER 3
+      {p:0.74,x:.76,y:.74,r:210,s:.58}, // FIELDWORK
+      {p:0.87,x:.22,y:.25,r:252,s:.50}, // GALLERY / CO-CURRICULAR
+      {p:1.00,x:.78,y:.82,r:310,s:.40}  // FOOTER
+    ];
+
+    function interpolate(progress){
+      if(progress<=points[0].p) return points[0];
+      if(progress>=points.at(-1).p) return points.at(-1);
+      let a=points[0],b=points[1];
+      for(let i=0;i<points.length-1;i++){
+        if(progress>=points[i].p && progress<=points[i+1].p){a=points[i];b=points[i+1];break;}
+      }
+      const t=(progress-a.p)/(b.p-a.p);
+      const smooth=t*t*(3-2*t);
+      return {
+        x:a.x+(b.x-a.x)*smooth,
+        y:a.y+(b.y-a.y)*smooth,
+        r:a.r+(b.r-a.r)*smooth,
+        s:a.s+(b.s-a.s)*smooth
+      };
+    }
+
+    const render=gsap.quickTo(sat,'x',{duration:.34,ease:'power3.out'});
+    const renderY=gsap.quickTo(sat,'y',{duration:.34,ease:'power3.out'});
+    const renderR=gsap.quickTo(sat,'rotation',{duration:.34,ease:'power3.out'});
+    const renderS=gsap.quickTo(sat,'scale',{duration:.34,ease:'power3.out'});
+
+    // The trigger spans the WHOLE document, not just the hero.
+    ScrollTrigger.create({
+      id:'global-satellite-route',
+      trigger:document.documentElement,
+      start:0,
+      end:()=>ScrollTrigger.maxScroll(window),
+      invalidateOnRefresh:true,
+      onUpdate:self=>{
+        const q=interpolate(self.progress);
+        const w=window.innerWidth,h=window.innerHeight;
+        const satW=sat.getBoundingClientRect().width || 180;
+        const satH=sat.getBoundingClientRect().height || 100;
+        const x=q.x*w-satW/2;
+        const y=q.y*h-satH/2;
+        render(x);
+        renderY(y);
+        renderR(q.r);
+        renderS(q.s);
+        if(pct) pct.textContent=String(Math.round(self.progress*100)).padStart(2,'0')+'%';
+
+        // Scale the trail with flight speed and make the vehicle feel more aerodynamic.
+        const speed=Math.abs(self.getVelocity());
+        const trail=Math.min(1.7,1+speed/4200);
+        gsap.set(sat.querySelector('.global-sat-trail-a'),{scaleX:trail});
+        gsap.set(sat.querySelector('.global-sat-trail-b'),{scaleX:trail*.85});
+      }
+    });
+
+    // Tiny continuous attitude motion — the route itself remains scroll-controlled.
+    gsap.to(svg,{y:-3,rotation:1.5,duration:1.7,ease:'sine.inOut',repeat:-1,yoyo:true});
+
+    window.addEventListener('resize',()=>ScrollTrigger.refresh());
+    ScrollTrigger.refresh();
   }
-  window.addEventListener('load',boot,{once:true});
+
+  function boot(){
+    initLenis();
+    initGlobalSatellite();
+  }
+
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot,{once:true});
+  else boot();
 })();
 </script>
 
