@@ -3,82 +3,1941 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Bhagyashree Bardhan — MSc Geoinformatics portfolio featuring GIS, Remote Sensing, WebGIS, GeoAI and geospatial projects.">
-<meta property="og:title" content="Bhagyashree Bardhan | Geoinformatics Portfolio">
-<meta property="og:description" content="GIS · Remote Sensing · Geospatial Analysis · WebGIS · GeoAI">
-<meta property="og:type" content="website">
-<link rel="canonical" href="https://bhagyashreebardhan2001-gif.github.io/Github_portfolio/">
+
+<title>Bhagyashree Bardhan | Geoinformatics Portfolio</title>
+
+<meta name="description"
+content="Bhagyashree Bardhan — MSc Geoinformatics portfolio featuring GIS, Remote Sensing, WebGIS, GeoAI and geospatial projects.">
+
+<link rel="canonical"
+href="https://bhagyashreebardhan2001-gif.github.io/Github_portfolio/">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
-<title>Bhagyashree Bardhan | Geoinformatics Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+rel="stylesheet">
+
 <style>
-:root{--ink:#0a0b0c;--ink2:#101214;--paper:#f1efe9;--paper2:#e6e3da;--white:#faf9f5;--text:#f7f5ef;--muted:#a9aaa5;--darkmuted:#676a68;--line:rgba(255,255,255,.13);--darkline:rgba(10,11,12,.14);--accent:#77e3d0;--accent2:#d5ff66;--serif:'Instrument Serif',Georgia,serif;--sans:'DM Sans',Arial,sans-serif;--mono:'DM Mono',monospace;--ease:cubic-bezier(.2,.8,.2,1)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--text);font-family:var(--sans);overflow-x:hidden}body.lock{overflow:hidden}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}img{display:block;max-width:100%}::selection{background:var(--accent);color:var(--ink)}
-.loader{position:fixed;inset:0;background:var(--ink);z-index:9999;display:grid;place-items:center;transition:opacity .65s var(--ease),visibility .65s}.loader.hide{opacity:0;visibility:hidden}.loader-inner{text-align:center}.loader-name{font-size:clamp(24px,4vw,58px);letter-spacing:-.05em;font-weight:600}.loader-line{width:min(280px,55vw);height:1px;background:var(--line);margin:18px auto;overflow:hidden}.loader-line i{display:block;height:100%;width:0;background:var(--accent);animation:loadline 1s var(--ease) forwards}.loader-small{font:500 10px var(--mono);letter-spacing:.16em;color:var(--muted)}@keyframes loadline{to{width:100%}}
-.cursor{position:fixed;width:72px;height:72px;border:1px solid rgba(119,227,208,.6);border-radius:50%;pointer-events:none;z-index:10000;display:grid;place-items:center;opacity:0;transform:translate(-50%,-50%) scale(.7);transition:opacity .2s,transform .25s var(--ease),background .25s}.cursor span{font:500 8px var(--mono);letter-spacing:.12em}.cursor.show{opacity:1;transform:translate(-50%,-50%) scale(1)}.cursor.view{background:var(--accent);color:var(--ink);border-color:var(--accent)}
-.progress{position:fixed;right:14px;top:0;width:2px;height:100vh;background:rgba(255,255,255,.08);z-index:100}.progress i{display:block;width:100%;height:0;background:var(--accent)}
-.nav{position:fixed;top:0;left:0;width:100%;height:78px;padding:0 4vw;display:flex;align-items:center;justify-content:space-between;z-index:900;background:linear-gradient(to bottom,rgba(10,11,12,.9),transparent);transition:background .3s}.nav.scrolled{background:rgba(10,11,12,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.brand{font:500 11px var(--mono);letter-spacing:.08em}.brand b{color:var(--accent);font-weight:500}.nav-links{display:flex;gap:30px}.nav-links a{font:500 9px var(--mono);letter-spacing:.12em;color:#d5d6d2;position:relative}.nav-links a:after{content:'';position:absolute;left:0;bottom:-7px;width:0;height:1px;background:var(--accent);transition:.3s}.nav-links a:hover:after{width:100%}.menu{display:none;background:none;border:0}
-.wrap{width:min(1400px,90vw);margin:auto}.hero{min-height:100svh;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 30%,rgba(119,227,208,.08),transparent 28%),var(--ink);display:flex;align-items:center}.hero:before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:90px 90px;mask-image:linear-gradient(to bottom,black,transparent 90%);pointer-events:none}.hero:after{content:'18.5204° N / 73.8567° E';position:absolute;right:4vw;bottom:10vh;font:500 9px var(--mono);letter-spacing:.12em;color:rgba(255,255,255,.3)}.hero-wrap{position:relative;z-index:2;padding-top:100px}.hero-meta{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:12px;font:500 9px var(--mono);letter-spacing:.12em;color:var(--muted)}.hero-title{margin:6vh 0 4vh;line-height:.77;letter-spacing:-.075em}.hero-title h1{font-size:clamp(72px,15.5vw,245px);font-weight:600;margin:0}.hero-title .outline{color:transparent;-webkit-text-stroke:1px rgba(247,245,239,.72)}.hero-bottom{display:grid;grid-template-columns:190px 1fr 170px;gap:40px;align-items:end}.portrait{position:relative}.portrait img{width:190px;height:245px;object-fit:cover;filter:grayscale(12%);border-radius:2px}.portrait span{display:block;margin-top:10px;font:500 8px var(--mono);letter-spacing:.1em;color:var(--muted)}.hero-copy{max-width:620px;padding-bottom:8px}.eyebrow,.kicker{font:500 9px var(--mono);letter-spacing:.14em;color:var(--accent);text-transform:uppercase}.hero-copy h2{font-size:clamp(28px,3.6vw,55px);font-weight:500;letter-spacing:-.045em;line-height:1.05;margin:13px 0 25px}.hero-copy h2 em,.section-head em{font-family:var(--serif);font-weight:400}.underlink{font:500 9px var(--mono);letter-spacing:.12em;border-bottom:1px solid var(--line);padding-bottom:9px}.underlink b{color:var(--accent);margin-left:12px}.hero-side{font:500 8px var(--mono);letter-spacing:.1em;color:var(--muted);line-height:1.9;padding-bottom:8px}.scroll-note{position:absolute;left:5vw;bottom:30px;font:500 8px var(--mono);letter-spacing:.13em;color:var(--muted);z-index:3}.scroll-note:after{content:'';display:inline-block;width:45px;height:1px;background:var(--muted);margin:0 0 3px 12px}
-section{position:relative}.about{background:var(--paper);color:var(--ink);padding:150px 0 130px}.about .kicker{color:#537f77}.chapter-top{display:flex;justify-content:space-between;align-items:flex-start;border-top:1px solid var(--darkline);padding-top:12px;font:500 9px var(--mono);letter-spacing:.12em;color:var(--darkmuted)}.section-head{font-size:clamp(58px,9vw,135px);line-height:.82;letter-spacing:-.07em;font-weight:600;margin:65px 0 90px}.section-head em{font-weight:400}.about-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:9vw;align-items:start}.about-lead{font:400 clamp(29px,3.2vw,48px) var(--serif);line-height:1.02;letter-spacing:-.025em;max-width:560px}.about-copy p{max-width:570px;font-size:16px;line-height:1.7;color:#454744;margin:0 0 22px}.toolkit{margin-top:110px;display:grid;grid-template-columns:1fr 2fr;gap:70px;border-top:1px solid var(--darkline);padding-top:22px}.chips{display:flex;flex-wrap:wrap;gap:8px}.chips span{border:1px solid var(--darkline);padding:9px 11px;font:500 9px var(--mono);letter-spacing:.07em}.journey{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--darkline)}.journey div{padding:14px 10px 0 0;border-right:1px solid var(--darkline);min-height:75px}.journey div:last-child{border:0}.journey b{font:500 8px var(--mono);color:#8a8d89}.journey span{display:block;font:600 10px var(--sans);margin-top:10px;line-height:1.25}.education{margin-top:100px;border-top:1px solid var(--darkline)}.edu-row{display:grid;grid-template-columns:150px 1fr;padding:25px 0;border-bottom:1px solid var(--darkline);align-items:center}.edu-row>b{font:500 9px var(--mono);color:#777a76}.edu-row h3{margin:0;font-size:27px;letter-spacing:-.03em}.edu-row p{margin:5px 0 0;color:#6a6d69;font-size:13px}
-.projects{background:var(--ink);padding:150px 0 130px}.projects .chapter-top{border-color:var(--line);color:var(--muted)}.projects .section-head{margin-bottom:35px}.project-intro{display:flex;justify-content:space-between;gap:40px;margin-bottom:65px}.project-intro p{max-width:420px;color:var(--muted);font-size:14px;line-height:1.65;margin:0}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px}.filters button{background:transparent;border:1px solid var(--line);padding:10px 13px;font:500 8px var(--mono);letter-spacing:.09em;cursor:pointer;transition:.25s}.filters button:hover,.filters button.active{background:var(--accent);color:var(--ink);border-color:var(--accent)}.project-list{border-top:1px solid var(--line)}.project-row{display:grid;grid-template-columns:70px 1.5fr .9fr 100px;gap:20px;align-items:center;padding:27px 0;border-bottom:1px solid var(--line);cursor:pointer;transition:padding .35s var(--ease)}.project-row:hover{padding-left:16px;padding-right:16px;background:rgba(255,255,255,.025)}.project-num{font:500 9px var(--mono);color:var(--muted)}.project-name{font-size:clamp(25px,3vw,44px);letter-spacing:-.045em}.project-desc{font-size:12px;line-height:1.5;color:var(--muted)}.project-cat{text-align:right;font:500 8px var(--mono);letter-spacing:.09em;color:var(--accent)}.project-thumb{display:none}.project-row:hover .project-name{color:var(--accent)}.spatial-note{margin-top:80px;border:1px solid var(--line);padding:28px;display:flex;justify-content:space-between;align-items:center;gap:30px;background:linear-gradient(120deg,rgba(119,227,208,.05),transparent)}.spatial-note h3{font-size:30px;letter-spacing:-.04em;margin:7px 0}.spatial-note p{color:var(--muted);font-size:12px;max-width:570px;line-height:1.6;margin:0}.coords{font:500 8px var(--mono);color:var(--accent);white-space:nowrap}
-.certificates{background:var(--paper2);color:var(--ink);padding:150px 0}.certificates .chapter-top{border-color:var(--darkline);color:var(--darkmuted)}.certificates .kicker{color:#537f77}.cert-intro{display:grid;grid-template-columns:1.25fr .75fr;gap:8vw;align-items:end;margin:65px 0 75px}.cert-intro .section-head{margin:0}.cert-intro>p{color:#5e615e;font-size:14px;line-height:1.7;max-width:400px}.cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.cert{background:var(--white);border:1px solid rgba(10,11,12,.12);transition:transform .35s var(--ease),box-shadow .35s}.cert:hover{transform:translateY(-7px);box-shadow:0 20px 50px rgba(10,11,12,.1)}.cert-media{aspect-ratio:4/3;background:#d8d5cc;overflow:hidden;position:relative}.cert-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}.cert:hover .cert-media img{transform:scale(1.025)}.pdf-media{display:grid;place-items:center;background:linear-gradient(135deg,#1a1d1d,#303634);color:#fff}.pdf-media span{font:400 64px var(--serif);opacity:.9}.pdf-media small{position:absolute;bottom:15px;left:15px;font:500 8px var(--mono);letter-spacing:.12em;color:var(--accent)}.cert-body{padding:22px}.cert-body .cert-type{font:500 8px var(--mono);letter-spacing:.11em;color:#64877f}.cert-body h3{font-size:22px;line-height:1.05;letter-spacing:-.035em;margin:10px 0 8px}.cert-body p{font-size:11px;color:#6b6e69;margin:0;min-height:16px}.cert-link{display:inline-flex;margin-top:18px;padding-bottom:7px;border-bottom:1px solid #a9aaa5;font:500 8px var(--mono);letter-spacing:.1em}.cert-link:hover{color:#537f77;border-color:#537f77}.cert-empty{display:none}.achievements{margin-top:90px;border-top:1px solid var(--darkline);padding-top:20px}.achievements p{color:#537f77}.achievement{display:flex;justify-content:space-between;border-bottom:1px solid var(--darkline);padding:18px 0;font-size:13px}.achievement span{font:500 8px var(--mono);color:#777a76}
-.contact{padding:150px 0 110px;background:var(--ink)}.contact .section-head{margin:70px 0}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:end}.contact-copy{color:var(--muted);max-width:450px;font-size:14px;line-height:1.7}.contact-links{display:flex;flex-direction:column;border-top:1px solid var(--line)}.contact-links a{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);padding:17px 0;font:500 10px var(--mono);letter-spacing:.1em}.contact-links b{color:var(--accent);font-size:16px}.contact-links a:hover{padding-left:12px;color:var(--accent);transition:.25s}.footer{border-top:1px solid var(--line);padding:25px 5vw;display:flex;justify-content:space-between;gap:20px;font:500 8px var(--mono);letter-spacing:.1em;color:var(--muted)}.footer strong{color:var(--text)}
-.modal{position:fixed;inset:0;z-index:5000;display:none;place-items:center;padding:25px}.modal.open{display:grid}.modal-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.78);backdrop-filter:blur(12px)}.modal-card{position:relative;z-index:1;width:min(1050px,94vw);max-height:90vh;overflow:auto;background:var(--paper);color:var(--ink);display:grid;grid-template-columns:.9fr 1.1fr;box-shadow:0 30px 100px #000}.modal-close{position:absolute;right:15px;top:15px;width:38px;height:38px;border:1px solid rgba(10,11,12,.18);background:rgba(241,239,233,.85);border-radius:50%;cursor:pointer;font-size:22px;z-index:2}.modal-visual{min-height:520px;background:#141719;overflow:hidden}.modal-visual img{width:100%;height:100%;object-fit:cover}.modal-content{padding:55px 48px}.modal-content h2{font-size:clamp(38px,4vw,62px);letter-spacing:-.055em;line-height:.92;margin:15px 0}.modal-meta{font:500 8px var(--mono);letter-spacing:.1em;color:#65746f}.modal-content p{font-size:14px;line-height:1.7;color:#4f5350}.modal-tags{display:flex;flex-wrap:wrap;gap:6px;margin:25px 0}.modal-tags span{border:1px solid var(--darkline);padding:7px 9px;font:500 8px var(--mono)}.modal-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.modal-actions a{border:1px solid var(--darkline);padding:12px 14px;font:500 8px var(--mono);letter-spacing:.08em}.modal-actions a.primary{background:var(--ink);color:var(--text)}
-.cert-lightbox{position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:6000;display:none;place-items:center;padding:30px}.cert-lightbox.open{display:grid}.cert-lightbox img{max-width:min(1100px,92vw);max-height:88vh;object-fit:contain}.lightbox-close{position:absolute;top:22px;right:25px;background:none;border:0;color:white;font-size:36px;cursor:pointer}.pdf-frame{width:min(1050px,92vw);height:min(82vh,850px);border:0;background:white}
-.reveal{opacity:0;transform:translateY(25px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.reveal.in{opacity:1;transform:none}
-@media(max-width:900px){.nav-links{display:none}.menu{display:block}.menu i{display:block;width:24px;height:1px;background:white;margin:6px}.hero-bottom{grid-template-columns:140px 1fr}.hero-side{display:none}.portrait img{width:140px;height:185px}.about-grid,.cert-intro,.contact-grid{grid-template-columns:1fr}.toolkit{grid-template-columns:1fr;gap:35px}.journey{grid-template-columns:repeat(2,1fr)}.journey div:nth-child(2){border-right:0}.cert-grid{grid-template-columns:repeat(2,1fr)}.project-row{grid-template-columns:45px 1fr 100px}.project-desc{display:none}.modal-card{grid-template-columns:1fr}.modal-visual{min-height:260px;max-height:42vh}.modal-content{padding:35px 28px}}
-@media(max-width:600px){.wrap{width:88vw}.nav{height:65px;padding:0 6vw}.hero-wrap{padding-top:80px}.hero-title{margin:8vh 0 6vh}.hero-title h1{font-size:20vw}.hero-bottom{grid-template-columns:1fr;gap:25px}.portrait img{width:120px;height:150px}.hero-copy h2{font-size:31px}.hero-side{display:block}.about,.projects,.certificates,.contact{padding:95px 0}.section-head{font-size:18vw;margin:45px 0 55px}.about-grid{gap:45px}.toolkit{margin-top:70px}.journey{grid-template-columns:1fr}.journey div{border-right:0;border-bottom:1px solid var(--darkline);min-height:auto;padding-bottom:13px}.cert-grid{grid-template-columns:1fr}.project-intro{display:block}.project-intro p{margin-top:20px}.project-row{grid-template-columns:38px 1fr 70px;padding:22px 0}.project-name{font-size:24px}.project-cat{font-size:7px}.spatial-note{display:block}.coords{display:block;margin-top:20px}.footer{flex-direction:column}.cursor,.progress{display:none}.contact-grid{gap:45px}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+:root{
+    --black:#080909;
+    --black2:#111313;
+    --paper:#f2f0ea;
+    --paper2:#e7e4dc;
+    --white:#faf9f5;
+    --text:#f5f3ed;
+    --muted:#999c98;
+    --dark:#3f4240;
+    --line:rgba(255,255,255,.14);
+    --darkline:rgba(0,0,0,.14);
+    --accent:#76e0cf;
+    --accent2:#d8ff68;
+    --serif:'Instrument Serif',Georgia,serif;
+    --sans:'DM Sans',Arial,sans-serif;
+    --mono:'DM Mono',monospace;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    margin:0;
+    background:var(--black);
+    color:var(--text);
+    font-family:var(--sans);
+    overflow-x:hidden;
+}
+
+body.lock{
+    overflow:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    font:inherit;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+::selection{
+    background:var(--accent);
+    color:var(--black);
+}
+
+/* =========================
+   LOADER
+========================= */
+
+.loader{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    background:var(--black);
+    display:grid;
+    place-items:center;
+    transition:.7s ease;
+}
+
+.loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.loader-inner{
+    text-align:center;
+}
+
+.loader-name{
+    font-size:clamp(26px,5vw,70px);
+    font-weight:600;
+    letter-spacing:-.06em;
+}
+
+.loader-line{
+    width:min(320px,60vw);
+    height:1px;
+    background:var(--line);
+    margin:20px auto;
+    overflow:hidden;
+}
+
+.loader-line span{
+    display:block;
+    height:100%;
+    width:100%;
+    background:var(--accent);
+    transform-origin:left;
+    animation:loaderLine 1.1s ease forwards;
+}
+
+.loader-small{
+    font:500 9px var(--mono);
+    letter-spacing:.18em;
+    color:var(--muted);
+}
+
+@keyframes loaderLine{
+    from{transform:scaleX(0)}
+    to{transform:scaleX(1)}
+}
+
+/* =========================
+   CURSOR
+========================= */
+
+.cursor{
+    position:fixed;
+    width:70px;
+    height:70px;
+    border:1px solid rgba(118,224,207,.65);
+    border-radius:50%;
+    pointer-events:none;
+    z-index:10000;
+    display:grid;
+    place-items:center;
+    opacity:0;
+    transform:translate(-50%,-50%) scale(.7);
+    transition:.25s ease;
+}
+
+.cursor.show{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.cursor.view{
+    background:var(--accent);
+    color:var(--black);
+}
+
+/* =========================
+   NAV
+========================= */
+
+.nav{
+    position:fixed;
+    z-index:900;
+    top:0;
+    left:0;
+    width:100%;
+    height:78px;
+    padding:0 4vw;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    transition:.3s ease;
+}
+
+.nav.scrolled{
+    background:rgba(8,9,9,.88);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--line);
+}
+
+.brand{
+    font:500 11px var(--mono);
+    letter-spacing:.08em;
+}
+
+.brand b{
+    color:var(--accent);
+}
+
+.nav-links{
+    display:flex;
+    gap:32px;
+}
+
+.nav-links a{
+    font:500 9px var(--mono);
+    letter-spacing:.12em;
+    color:#d4d5d1;
+}
+
+.nav-links a:hover{
+    color:var(--accent);
+}
+
+.menu{
+    display:none;
+    background:none;
+    border:0;
+}
+
+.menu i{
+    display:block;
+    width:24px;
+    height:1px;
+    background:white;
+    margin:6px;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.wrap{
+    width:min(1400px,90vw);
+    margin:auto;
+}
+
+.chapter-top{
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    border-top:1px solid var(--line);
+    padding-top:12px;
+    font:500 9px var(--mono);
+    letter-spacing:.12em;
+    color:var(--muted);
+}
+
+.kicker{
+    font:500 9px var(--mono);
+    letter-spacing:.14em;
+    color:var(--accent);
+}
+
+.section-title{
+    font-size:clamp(60px,9vw,140px);
+    line-height:.82;
+    letter-spacing:-.075em;
+    margin:70px 0;
+}
+
+.section-title em{
+    font-family:var(--serif);
+    font-weight:400;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100svh;
+    position:relative;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    background:
+        radial-gradient(circle at 75% 25%,rgba(118,224,207,.09),transparent 25%),
+        var(--black);
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);
+    background-size:90px 90px;
+    mask-image:linear-gradient(to bottom,black,transparent);
+}
+
+.hero:after{
+    content:"18.5204° N / 73.8567° E";
+    position:absolute;
+    right:4vw;
+    bottom:8vh;
+    color:rgba(255,255,255,.28);
+    font:500 9px var(--mono);
+    letter-spacing:.12em;
+}
+
+.hero-wrap{
+    position:relative;
+    z-index:2;
+    padding-top:90px;
+}
+
+.hero-meta{
+    display:flex;
+    justify-content:space-between;
+    border-top:1px solid var(--line);
+    padding-top:12px;
+    font:500 9px var(--mono);
+    letter-spacing:.12em;
+    color:var(--muted);
+}
+
+.hero-title{
+    margin:7vh 0 5vh;
+    line-height:.76;
+    letter-spacing:-.08em;
+}
+
+.hero-title h1{
+    margin:0;
+    font-size:clamp(72px,15.5vw,245px);
+    font-weight:600;
+}
+
+.hero-title .outline{
+    color:transparent;
+    -webkit-text-stroke:1px rgba(255,255,255,.7);
+}
+
+.hero-bottom{
+    display:grid;
+    grid-template-columns:190px 1fr 170px;
+    gap:40px;
+    align-items:end;
+}
+
+.portrait img{
+    width:190px;
+    height:245px;
+    object-fit:cover;
+    filter:grayscale(10%);
+}
+
+.portrait small{
+    display:block;
+    margin-top:10px;
+    color:var(--muted);
+    font:500 8px var(--mono);
+    letter-spacing:.1em;
+}
+
+.hero-copy{
+    max-width:650px;
+}
+
+.hero-copy h2{
+    margin:14px 0 28px;
+    font-size:clamp(30px,3.8vw,58px);
+    line-height:1.02;
+    font-weight:500;
+    letter-spacing:-.05em;
+}
+
+.hero-copy h2 em{
+    font-family:var(--serif);
+}
+
+.hero-link{
+    display:inline-block;
+    border-bottom:1px solid var(--line);
+    padding-bottom:9px;
+    font:500 9px var(--mono);
+    letter-spacing:.12em;
+}
+
+.hero-link b{
+    color:var(--accent);
+    margin-left:10px;
+}
+
+.hero-side{
+    color:var(--muted);
+    font:500 8px var(--mono);
+    line-height:2;
+    letter-spacing:.1em;
+}
+
+.scroll-note{
+    position:absolute;
+    left:5vw;
+    bottom:30px;
+    z-index:3;
+    font:500 8px var(--mono);
+    letter-spacing:.13em;
+    color:var(--muted);
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    background:var(--paper);
+    color:var(--black);
+    padding:150px 0 130px;
+}
+
+.about .chapter-top{
+    border-color:var(--darkline);
+    color:#696c68;
+}
+
+.about .kicker{
+    color:#527d75;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1.2fr;
+    gap:9vw;
+}
+
+.about-lead{
+    font:400 clamp(30px,3.4vw,50px) var(--serif);
+    line-height:1.02;
+}
+
+.about-copy p{
+    color:#494c49;
+    font-size:16px;
+    line-height:1.75;
+    margin:0 0 22px;
+    max-width:590px;
+}
+
+.toolkit{
+    margin-top:110px;
+    padding-top:22px;
+    border-top:1px solid var(--darkline);
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:70px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:18px;
+}
+
+.skills span{
+    border:1px solid var(--darkline);
+    padding:9px 11px;
+    font:500 9px var(--mono);
+}
+
+.journey{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    border-top:1px solid var(--darkline);
+    margin-top:18px;
+}
+
+.journey div{
+    padding:14px 10px;
+    border-right:1px solid var(--darkline);
+}
+
+.journey div:last-child{
+    border-right:0;
+}
+
+.journey small{
+    color:#858884;
+    font:500 8px var(--mono);
+}
+
+.journey strong{
+    display:block;
+    margin-top:10px;
+    font-size:10px;
+}
+
+.education{
+    margin-top:100px;
+    border-top:1px solid var(--darkline);
+}
+
+.edu{
+    display:grid;
+    grid-template-columns:150px 1fr;
+    padding:25px 0;
+    border-bottom:1px solid var(--darkline);
+}
+
+.edu label{
+    color:#777a76;
+    font:500 9px var(--mono);
+}
+
+.edu h3{
+    margin:0;
+    font-size:27px;
+}
+
+.edu p{
+    margin:6px 0 0;
+    color:#6b6e6a;
+    font-size:13px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects{
+    background:var(--black);
+    padding:150px 0 130px;
+}
+
+.project-intro{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:40px;
+}
+
+.project-intro p{
+    max-width:430px;
+    color:var(--muted);
+    line-height:1.7;
+    font-size:14px;
+}
+
+.filters{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:50px 0 28px;
+}
+
+.filters button{
+    background:transparent;
+    color:var(--text);
+    border:1px solid var(--line);
+    padding:10px 14px;
+    cursor:pointer;
+    font:500 8px var(--mono);
+    letter-spacing:.1em;
+}
+
+.filters button.active,
+.filters button:hover{
+    background:var(--accent);
+    border-color:var(--accent);
+    color:var(--black);
+}
+
+.project-list{
+    border-top:1px solid var(--line);
+}
+
+.project{
+    display:grid;
+    grid-template-columns:65px 1.4fr 1fr 110px;
+    gap:20px;
+    align-items:center;
+    padding:30px 0;
+    border-bottom:1px solid var(--line);
+    cursor:pointer;
+    transition:.35s ease;
+}
+
+.project:hover{
+    padding-left:18px;
+    padding-right:18px;
+    background:rgba(255,255,255,.025);
+}
+
+.project-number{
+    color:var(--muted);
+    font:500 9px var(--mono);
+}
+
+.project-name{
+    font-size:clamp(25px,3vw,45px);
+    letter-spacing:-.05em;
+}
+
+.project:hover .project-name{
+    color:var(--accent);
+}
+
+.project-description{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.55;
+}
+
+.project-category{
+    text-align:right;
+    color:var(--accent);
+    font:500 8px var(--mono);
+    letter-spacing:.1em;
+}
+
+.spatial{
+    margin-top:80px;
+    padding:30px;
+    border:1px solid var(--line);
+}
+
+.spatial h3{
+    font-size:32px;
+    margin:10px 0;
+    letter-spacing:-.04em;
+}
+
+.spatial p{
+    max-width:600px;
+    color:var(--muted);
+    line-height:1.6;
+    font-size:13px;
+}
+
+/* =========================
+   CERTIFICATES
+========================= */
+
+.certificates{
+    background:var(--paper2);
+    color:var(--black);
+    padding:150px 0;
+}
+
+.certificates .chapter-top{
+    border-color:var(--darkline);
+    color:#6b6d69;
+}
+
+.cert-intro{
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:8vw;
+    align-items:end;
+}
+
+.cert-intro p{
+    color:#5e615d;
+    line-height:1.7;
+    font-size:14px;
+}
+
+.cert-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    margin-top:70px;
+}
+
+.certificate{
+    background:var(--white);
+    border:1px solid rgba(0,0,0,.12);
+    transition:.35s ease;
+}
+
+.certificate:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 60px rgba(0,0,0,.1);
+}
+
+.certificate-image{
+    aspect-ratio:4/3;
+    background:#d5d2c9;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.certificate-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.5s ease;
+}
+
+.certificate:hover img{
+    transform:scale(1.035);
+}
+
+.pdf{
+    height:100%;
+    display:grid;
+    place-items:center;
+    position:relative;
+    background:linear-gradient(135deg,#151918,#343b38);
+    color:white;
+}
+
+.pdf strong{
+    font:400 65px var(--serif);
+}
+
+.pdf small{
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    color:var(--accent);
+    font:500 8px var(--mono);
+}
+
+.certificate-body{
+    padding:22px;
+}
+
+.certificate-type{
+    color:#537d75;
+    font:500 8px var(--mono);
+    letter-spacing:.12em;
+}
+
+.certificate h3{
+    font-size:21px;
+    line-height:1.1;
+    margin:10px 0;
+}
+
+.certificate p{
+    color:#6d706c;
+    font-size:11px;
+}
+
+.certificate-link{
+    display:inline-block;
+    margin-top:15px;
+    border-bottom:1px solid #aaa;
+    padding-bottom:6px;
+    font:500 8px var(--mono);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    background:var(--black);
+    padding:150px 0;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8vw;
+    align-items:end;
+}
+
+.contact-text{
+    max-width:470px;
+    color:var(--muted);
+    line-height:1.7;
+}
+
+.contact-links{
+    border-top:1px solid var(--line);
+}
+
+.contact-links a{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 0;
+    border-bottom:1px solid var(--line);
+    font:500 10px var(--mono);
+    letter-spacing:.1em;
+}
+
+.contact-links a:hover{
+    color:var(--accent);
+}
+
+footer{
+    border-top:1px solid var(--line);
+    background:var(--black);
+    padding:25px 5vw;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    color:var(--muted);
+    font:500 8px var(--mono);
+    letter-spacing:.1em;
+}
+
+footer strong{
+    color:white;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    position:fixed;
+    inset:0;
+    z-index:5000;
+    display:none;
+    place-items:center;
+    padding:25px;
+}
+
+.modal.open{
+    display:grid;
+}
+
+.modal-bg{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.8);
+    backdrop-filter:blur(12px);
+}
+
+.modal-card{
+    position:relative;
+    z-index:2;
+    width:min(1050px,94vw);
+    max-height:90vh;
+    overflow:auto;
+    display:grid;
+    grid-template-columns:.9fr 1.1fr;
+    background:var(--paper);
+    color:var(--black);
+}
+
+.modal-image{
+    min-height:500px;
+    background:#151817;
+}
+
+.modal-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.modal-content{
+    padding:55px;
+}
+
+.modal-content h2{
+    font-size:clamp(40px,4vw,65px);
+    line-height:.9;
+    letter-spacing:-.06em;
+}
+
+.modal-content p{
+    color:#555855;
+    line-height:1.7;
+}
+
+.close{
+    position:absolute;
+    right:15px;
+    top:15px;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:1px solid rgba(0,0,0,.2);
+    background:white;
+    cursor:pointer;
+    z-index:3;
+}
+
+.modal-tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:7px;
+    margin:25px 0;
+}
+
+.modal-tags span{
+    padding:7px 9px;
+    border:1px solid var(--darkline);
+    font:500 8px var(--mono);
+}
+
+.live-link{
+    display:inline-block;
+    background:var(--black);
+    color:white;
+    padding:13px 16px;
+    font:500 8px var(--mono);
+}
+
+/* =========================
+   CERTIFICATE LIGHTBOX
+========================= */
+
+.lightbox{
+    position:fixed;
+    inset:0;
+    z-index:6000;
+    display:none;
+    place-items:center;
+    background:rgba(0,0,0,.9);
+    padding:25px;
+}
+
+.lightbox.open{
+    display:grid;
+}
+
+.lightbox img{
+    max-width:92vw;
+    max-height:88vh;
+    object-fit:contain;
+}
+
+.lightbox iframe{
+    width:min(1050px,92vw);
+    height:85vh;
+    background:white;
+    border:0;
+}
+
+.lightbox-close{
+    position:absolute;
+    right:25px;
+    top:20px;
+    color:white;
+    background:none;
+    border:0;
+    font-size:35px;
+    cursor:pointer;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .hero-bottom{
+        grid-template-columns:140px 1fr;
+    }
+
+    .hero-side{
+        display:none;
+    }
+
+    .portrait img{
+        width:140px;
+        height:185px;
+    }
+
+    .about-grid,
+    .cert-intro,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .toolkit{
+        grid-template-columns:1fr;
+    }
+
+    .journey{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cert-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .project{
+        grid-template-columns:45px 1fr 100px;
+    }
+
+    .project-description{
+        display:none;
+    }
+
+    .modal-card{
+        grid-template-columns:1fr;
+    }
+
+    .modal-image{
+        min-height:280px;
+        max-height:40vh;
+    }
+}
+
+@media(max-width:600px){
+
+    .wrap{
+        width:88vw;
+    }
+
+    .nav{
+        height:65px;
+        padding:0 6vw;
+    }
+
+    .hero{
+        min-height:100svh;
+    }
+
+    .hero-meta{
+        font-size:7px;
+    }
+
+    .hero-title{
+        margin:8vh 0 7vh;
+    }
+
+    .hero-title h1{
+        font-size:20vw;
+    }
+
+    .hero-bottom{
+        grid-template-columns:1fr;
+        gap:28px;
+    }
+
+    .portrait img{
+        width:120px;
+        height:150px;
+    }
+
+    .section-title{
+        font-size:18vw;
+        margin:50px 0;
+    }
+
+    .about,
+    .projects,
+    .certificates,
+    .contact{
+        padding:100px 0;
+    }
+
+    .journey{
+        grid-template-columns:1fr;
+    }
+
+    .journey div{
+        border-right:0;
+        border-bottom:1px solid var(--darkline);
+    }
+
+    .cert-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project{
+        grid-template-columns:38px 1fr 65px;
+        padding:23px 0;
+    }
+
+    .project-name{
+        font-size:23px;
+    }
+
+    .project-category{
+        font-size:7px;
+    }
+
+    .contact-grid{
+        gap:50px;
+    }
+
+    footer{
+        flex-direction:column;
+    }
+
+    .cursor{
+        display:none;
+    }
+}
 </style>
 </head>
+
 <body>
-<div class="loader" id="loader"><div class="loader-inner"><div class="loader-name">BHAGYASHREE BARDHAN</div><div class="loader-line"><i></i></div><div class="loader-small">GIS / REMOTE SENSING / GEOINFORMATICS</div></div></div>
-<div class="cursor" id="cursor"><span>VIEW</span></div><div class="progress"><i id="progressBar"></i></div>
-<nav class="nav" id="nav"><a class="brand" href="#home">BHAGYASHREE <b>/ GEO</b></a><div class="nav-links"><a href="#about">01 ABOUT</a><a href="#projects">02 PROJECTS</a><a href="#certificates">03 CERTIFICATES</a><a href="#contact">CONTACT</a></div><button class="menu" aria-label="Menu"><i></i><i></i></button></nav>
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+    <div class="loader-inner">
+        <div class="loader-name">BHAGYASHREE BARDHAN</div>
+        <div class="loader-line"><span></span></div>
+        <div class="loader-small">
+            GIS / REMOTE SENSING / GEOINFORMATICS
+        </div>
+    </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+    <a href="#home" class="brand">
+        BHAGYASHREE <b>/ GEO</b>
+    </a>
+
+    <div class="nav-links">
+        <a href="#about">01 ABOUT</a>
+        <a href="#projects">02 PROJECTS</a>
+        <a href="#certificates">03 CERTIFICATES</a>
+        <a href="#contact">CONTACT</a>
+    </div>
+
+    <button class="menu" aria-label="Menu">
+        <i></i>
+        <i></i>
+    </button>
+</nav>
+
 <main>
-<header class="hero" id="home"><div class="wrap hero-wrap"><div class="hero-meta"><span>01 / EARTH OBSERVATION PORTFOLIO</span><span>PUNE, INDIA · 18.5204° N / 73.8567° E</span></div><div class="hero-title"><h1>BHAGYASHREE</h1><h1 class="outline">BARDHAN</h1></div><div class="hero-bottom"><div class="portrait"><img src="profile.jpg" alt="Bhagyashree Bardhan"><span>MSC GEOINFORMATICS / PUNE</span></div><div class="hero-copy"><div class="eyebrow">GIS · REMOTE SENSING · GEOSPATIAL ANALYSIS</div><h2>I work with spatial data to understand <em>real places.</em></h2><a class="underlink" href="#about">DISCOVER THE PERSON <b>↓</b></a></div><div class="hero-side">EARTH OBSERVATION<br>SPATIAL DATA<br>URBAN SYSTEMS<br>FIELD + DIGITAL</div></div></div><div class="scroll-note">SCROLL TO EXPLORE</div></header>
-<section class="about" id="about"><div class="wrap"><div class="chapter-top"><span>02 / ABOUT ME</span><span>FROM GEOGRAPHY → GEOINFORMATICS</span></div><h2 class="section-head">I read landscapes<br><em>through data.</em></h2><div class="about-grid"><div class="about-lead">Geography gave me a way to look at places. Geoinformatics gave me the tools to investigate them.</div><div class="about-copy"><p>I am an MSc Geoinformatics student at Bharati Vidyapeeth Institute of Environment, Education and Research, Pune, with a background in Geography.</p><p>My work moves across GIS, satellite remote sensing, Google Earth Engine, QGIS, ArcGIS Pro, Python, GeoAI, WebGIS and spatial analysis.</p><p>I am particularly interested in urban environments, mobility, Earth observation, landscape analysis, spatial data and geospatial technology.</p></div></div><div class="toolkit"><div><div class="kicker">THE TOOLKIT</div><div class="chips"><span>GIS & SPATIAL ANALYSIS</span><span>REMOTE SENSING</span><span>GOOGLE EARTH ENGINE</span><span>ARCGIS PRO</span><span>QGIS</span><span>PYTHON</span><span>GEOAI</span><span>WEBGIS</span><span>SPATIAL DATABASES</span><span>DATA VISUALIZATION</span></div></div><div><div class="kicker">THE JOURNEY</div><div class="journey"><div><b>01</b><span>GEOGRAPHY</span></div><div><b>02</b><span>GIS</span></div><div><b>03</b><span>REMOTE SENSING</span></div><div><b>04</b><span>GEOINFORMATICS</span></div><div><b>05</b><span>GEOAI / SPATIAL RESEARCH</span></div></div></div></div><div class="education"><div class="kicker">EDUCATION</div><div class="edu-row"><b>MSC</b><div><h3>Geoinformatics</h3><p>Bharati Vidyapeeth Institute of Environment, Education and Research</p></div></div><div class="edu-row"><b>DEGREE</b><div><h3>Geography</h3><p>North Bengal St. Xavier's College</p></div></div><div class="edu-row"><b>SCHOOL</b><div><h3>Science</h3><p>Army Public School, Sukna</p></div></div></div></div></section>
-<section class="projects" id="projects"><div class="wrap"><div class="chapter-top"><span>03 / GITHUB PROJECTS</span><span>ONLY SELECTED LIVE PROJECTS</span></div><div class="project-intro"><h2 class="section-head">The <em>work.</em></h2><p>A visual index of my GitHub projects — interactive maps, geospatial data analysis and Earth-observation applications.</p></div><div class="filters" id="filters"><button class="active" data-filter="ALL">ALL</button><button data-filter="WEB GIS">WEB GIS</button><button data-filter="DATA ANALYSIS">DATA ANALYSIS</button></div><div class="project-list" id="projectList"></div><div class="spatial-note"><div><div class="kicker">SPATIAL INDEX</div><h3>Four projects. One spatial practice.</h3><p>From Hyderabad land-cover mapping and Magarpatta satellite exploration to geospatial big-data analysis and global earthquake visualization.</p></div><div class="coords">18.5204° N<br>73.8567° E</div></div></div></section>
-<section class="certificates" id="certificates"><div class="wrap"><div class="chapter-top"><span>04 / PROFESSIONAL ARCHIVE</span><span>LEARNING + CERTIFICATION</span></div><div class="cert-intro"><h2 class="section-head">Certificates<br><em>& achievements.</em></h2><p>A curated archive of certificates currently present in the portfolio repository. Click an image to view it larger or open the original PDF.</p></div><div class="cert-grid" id="certGrid"></div><div class="achievements"><div class="kicker">CERTIFICATE TIMELINE</div><div class="achievement"><span>01</span><b>Kaggle Learn — Introduction to Pandas</b><span>DATA / PYTHON</span></div><div class="achievement"><span>02</span><b>Kaggle Learn — Introduction to Machine Learning</b><span>MACHINE LEARNING</span></div><div class="achievement"><span>03</span><b>Kaggle Learn — Intermediate Machine Learning</b><span>ML</span></div><div class="achievement"><span>04</span><b>NASA ARSET — NISAR</b><span>REMOTE SENSING</span></div><div class="achievement"><span>05</span><b>Research Methodology</b><span>RESEARCH</span></div><div class="achievement"><span>06</span><b>Simplilearn Certificate</b><span>PROFESSIONAL LEARNING</span></div></div></div></section>
-<section class="contact" id="contact"><div class="wrap"><div class="chapter-top"><span>05 / CONTACT</span><span>LET'S CONNECT</span></div><h2 class="section-head">Let's map something<br><em>meaningful.</em></h2><div class="contact-grid"><div class="contact-copy">Interested in GIS, remote sensing, geospatial analysis, urban systems or spatial data projects? Explore my work and connect through the links below.</div><div class="contact-links"><a href="https://github.com/bhagyashreebardhan2001-gif" target="_blank" rel="noopener">GITHUB <b>↗</b></a><a href="https://linkedin.com/in/your-username" target="_blank" rel="noopener">LINKEDIN <b>↗</b></a><a href="mailto:your-email@example.com">EMAIL <b>↗</b></a></div></div></div></section>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+<div class="wrap hero-wrap">
+
+    <div class="hero-meta">
+        <span>01 / EARTH OBSERVATION PORTFOLIO</span>
+        <span>PUNE, INDIA</span>
+    </div>
+
+    <div class="hero-title">
+        <h1>BHAGYASHREE</h1>
+        <h1 class="outline">BARDHAN</h1>
+    </div>
+
+    <div class="hero-bottom">
+
+        <div class="portrait">
+            <img src="profile.jpg"
+                 alt="Bhagyashree Bardhan">
+            <small>MSC GEOINFORMATICS / PUNE</small>
+        </div>
+
+        <div class="hero-copy">
+
+            <div class="kicker">
+                GIS · REMOTE SENSING · GEOSPATIAL ANALYSIS
+            </div>
+
+            <h2>
+                I work with spatial data to understand
+                <em>real places.</em>
+            </h2>
+
+            <a href="#about" class="hero-link">
+                DISCOVER THE PERSON ↓
+            </a>
+
+        </div>
+
+        <div class="hero-side">
+            EARTH OBSERVATION<br>
+            SPATIAL DATA<br>
+            URBAN SYSTEMS<br>
+            FIELD + DIGITAL
+        </div>
+
+    </div>
+
+</div>
+
+<div class="scroll-note">
+    SCROLL TO EXPLORE
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+<div class="wrap">
+
+<div class="chapter-top">
+    <span>02 / ABOUT ME</span>
+    <span>FROM GEOGRAPHY → GEOINFORMATICS</span>
+</div>
+
+<h2 class="section-title">
+    I read landscapes<br>
+    <em>through data.</em>
+</h2>
+
+<div class="about-grid">
+
+<div class="about-lead">
+    Geography gave me a way to look at places.
+    Geoinformatics gave me the tools to investigate them.
+</div>
+
+<div class="about-copy">
+
+<p>
+I am an MSc Geoinformatics student at Bharati Vidyapeeth Institute of Environment, Education and Research, Pune, with a background in Geography.
+</p>
+
+<p>
+My work moves across GIS, satellite remote sensing, Google Earth Engine, QGIS, ArcGIS Pro, Python, GeoAI, WebGIS and spatial analysis.
+</p>
+
+<p>
+I am particularly interested in urban environments, mobility, Earth observation, landscape analysis, spatial data and geospatial technology.
+</p>
+
+</div>
+
+</div>
+
+<div class="toolkit">
+
+<div>
+
+<div class="kicker">THE TOOLKIT</div>
+
+<div class="skills">
+<span>GIS & SPATIAL ANALYSIS</span>
+<span>REMOTE SENSING</span>
+<span>GOOGLE EARTH ENGINE</span>
+<span>ARCGIS PRO</span>
+<span>QGIS</span>
+<span>PYTHON</span>
+<span>GEOAI</span>
+<span>WEBGIS</span>
+<span>SPATIAL DATABASES</span>
+<span>DATA VISUALIZATION</span>
+</div>
+
+</div>
+
+<div>
+
+<div class="kicker">THE JOURNEY</div>
+
+<div class="journey">
+
+<div>
+<small>01</small>
+<strong>GEOGRAPHY</strong>
+</div>
+
+<div>
+<small>02</small>
+<strong>GIS</strong>
+</div>
+
+<div>
+<small>03</small>
+<strong>REMOTE SENSING</strong>
+</div>
+
+<div>
+<small>04</small>
+<strong>GEOINFORMATICS</strong>
+</div>
+
+<div>
+<small>05</small>
+<strong>GEOAI / SPATIAL RESEARCH</strong>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="education">
+
+<div class="kicker">EDUCATION</div>
+
+<div class="edu">
+<label>MSC</label>
+<div>
+<h3>Geoinformatics</h3>
+<p>Bharati Vidyapeeth Institute of Environment, Education and Research</p>
+</div>
+</div>
+
+<div class="edu">
+<label>DEGREE</label>
+<div>
+<h3>Geography</h3>
+<p>North Bengal St. Xavier's College</p>
+</div>
+</div>
+
+<div class="edu">
+<label>SCHOOL</label>
+<div>
+<h3>Science</h3>
+<p>Army Public School, Sukna</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="projects" id="projects">
+
+<div class="wrap">
+
+<div class="chapter-top">
+<span>03 / GITHUB PROJECTS</span>
+<span>ONLY SELECTED LIVE PROJECTS</span>
+</div>
+
+<div class="project-intro">
+
+<h2 class="section-title">
+The <em>work.</em>
+</h2>
+
+<p>
+A visual index of my GitHub projects — interactive maps,
+geospatial data analysis and Earth-observation applications.
+</p>
+
+</div>
+
+<div class="filters">
+
+<button class="active" data-filter="ALL">
+ALL
+</button>
+
+<button data-filter="WEB GIS">
+WEB GIS
+</button>
+
+<button data-filter="DATA ANALYSIS">
+DATA ANALYSIS
+</button>
+
+</div>
+
+<div class="project-list" id="projectList"></div>
+
+<div class="spatial">
+
+<div class="kicker">
+SPATIAL INDEX
+</div>
+
+<h3>
+Four projects. One spatial practice.
+</h3>
+
+<p>
+From Hyderabad land-cover mapping and Magarpatta satellite exploration
+to geospatial big-data analysis and global earthquake visualization.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CERTIFICATES ================= -->
+
+<section class="certificates" id="certificates">
+
+<div class="wrap">
+
+<div class="chapter-top">
+<span>04 / PROFESSIONAL ARCHIVE</span>
+<span>LEARNING + CERTIFICATION</span>
+</div>
+
+<div class="cert-intro">
+
+<h2 class="section-title">
+Certificates<br>
+<em>& achievements.</em>
+</h2>
+
+<p>
+A curated archive of certificates currently present in the portfolio repository.
+Click an image to view it larger or open the original PDF.
+</p>
+
+</div>
+
+<div class="cert-grid" id="certGrid"></div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<div class="wrap">
+
+<div class="chapter-top">
+<span>05 / CONTACT</span>
+<span>LET'S CONNECT</span>
+</div>
+
+<h2 class="section-title">
+Let's map something<br>
+<em>meaningful.</em>
+</h2>
+
+<div class="contact-grid">
+
+<div class="contact-text">
+Interested in GIS, remote sensing, geospatial analysis,
+urban systems or spatial data projects?
+Explore my work and connect through the links below.
+</div>
+
+<div class="contact-links">
+
+<a href="https://github.com/bhagyashreebardhan2001-gif"
+target="_blank"
+rel="noopener">
+GITHUB <b>↗</b>
+</a>
+
+<a href="https://linkedin.com/in/your-username"
+target="_blank"
+rel="noopener">
+LINKEDIN <b>↗</b>
+</a>
+
+<a href="mailto:your-email@example.com">
+EMAIL <b>↗</b>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
 </main>
-<footer class="footer"><strong>BHAGYASHREE BARDHAN</strong><span>GIS · REMOTE SENSING · GEOSPATIAL ANALYSIS · PUNE, INDIA</span><span>THERE'S ALWAYS ANOTHER LAYER TO EXPLORE.</span></footer>
-<div class="modal" id="projectModal" aria-hidden="true"><div class="modal-backdrop" data-close></div><article class="modal-card" role="dialog" aria-modal="true"><button class="modal-close" data-close aria-label="Close">×</button><div class="modal-visual"><img id="modalImg" alt=""></div><div class="modal-content"><div class="kicker" id="modalCat"></div><h2 id="modalTitle"></h2><div class="modal-meta" id="modalMeta"></div><p id="modalDesc"></p><div class="modal-tags" id="modalTags"></div><div class="modal-actions" id="modalActions"></div></div></article></div>
-<div class="cert-lightbox" id="certLightbox"><button class="lightbox-close" id="lightboxClose">×</button><div id="lightboxContent"></div></div>
+
+
+<footer>
+
+<strong>BHAGYASHREE BARDHAN</strong>
+
+<span>
+GIS · REMOTE SENSING · GEOSPATIAL ANALYSIS · PUNE, INDIA
+</span>
+
+<span>
+THERE'S ALWAYS ANOTHER LAYER TO EXPLORE.
+</span>
+
+</footer>
+
+
+<!-- PROJECT MODAL -->
+
+<div class="modal" id="projectModal">
+
+<div class="modal-bg"></div>
+
+<div class="modal-card">
+
+<button class="close" id="closeProject">×</button>
+
+<div class="modal-image">
+<img id="modalImage" alt="">
+</div>
+
+<div class="modal-content">
+
+<div class="kicker" id="modalCategory"></div>
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalDescription"></p>
+
+<div class="modal-tags" id="modalTags"></div>
+
+<a id="modalLink"
+class="live-link"
+target="_blank"
+rel="noopener">
+VIEW LIVE PROJECT ↗
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- CERTIFICATE LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+<button class="lightbox-close" id="closeLightbox">
+×
+</button>
+
+<div id="lightboxContent"></div>
+
+</div>
+
+
 <script>
-const projects=[
-{id:'01',name:'HYD LULC',category:'WEB GIS',year:'2025',desc:'Land Use and Land Cover classification of Hyderabad using satellite imagery with interactive web visualization.',image:'hyd-lulc.png',tags:['HTML','CSS','JavaScript','Leaflet'],url:'https://bhagyashreebardhan2001-gif.github.io/HYD_LULC/'},
-{id:'02',name:'Magarpatta Satellite Explore',category:'WEB GIS',year:'2025',desc:'An interactive web application to explore and analyze satellite imagery of Magarpatta, Pune with multiple data layers and indices.',image:'magarpatta-satellite-explore.png',tags:['HTML','CSS','JavaScript','Leaflet'],url:'https://bhagyashreebardhan2001-gif.github.io/magarpatta-satellite-explore/'},
-{id:'03',name:'Geospatial Big Data',category:'DATA ANALYSIS',year:'2025',desc:'Analysis and visualization of large-scale geospatial data using modern data processing and visualization techniques.',image:'geospatial-big-data.svg',tags:['Python','Pandas','GeoPandas','Jupyter'],url:'https://bhagyashreebardhan2001-gif.github.io/Geospatial_bigdata/'},
-{id:'04',name:'Earthquakes World',category:'WEB GIS',year:'2025',desc:'Interactive visualization of global earthquake data with spatial and map-based exploration.',image:'earthquakes-world.svg',tags:['HTML','CSS','JavaScript','Leaflet'],url:'https://bhagyashreebardhan2001-gif.github.io/earthquakes_world/'}
-];
-const certificates=[
-{title:'NISAR — ARSET Certificate',org:'NASA ARSET',type:'REMOTE SENSING',image:null,file:'ARSET CERTIFICATE - NISAR_619.pdf'},
-{title:'Intermediate Machine Learning',org:'Kaggle Learn',type:'MACHINE LEARNING',image:'Intermediate MachineLearning-kaggle.png'},
-{title:'Introduction to Machine Learning',org:'Kaggle Learn',type:'MACHINE LEARNING',image:'Introduction to MachineLearning-kaggle.png'},
-{title:'Introduction to Pandas',org:'Kaggle Learn',type:'PYTHON / DATA ANALYSIS',image:'Introduction to Pandas-kaggle.png'},
-{title:'Research Methodology',org:'',type:'RESEARCH',image:null,file:'Research Methodology (2).pdf'},
-{title:'Simplilearn Certificate',org:'Simplilearn',type:'PROFESSIONAL LEARNING',image:null,file:'Simplilearn Certificate (2).pdf'}
-];
-const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const list=$('#projectList');
-function renderProjects(filter='ALL'){
- const data=filter==='ALL'?projects:projects.filter(p=>p.category===filter);
- list.innerHTML=data.map(p=>`<article class="project-row" tabindex="0" data-id="${p.id}"><div class="project-num">${p.id}</div><div class="project-name">${p.name}</div><div class="project-desc">${p.desc}</div><div class="project-cat">${p.category}<br>${p.year}</div></article>`).join('');
- $$('.project-row').forEach(row=>row.addEventListener('click',()=>openProject(row.dataset.id)));
- $$('.project-row').forEach(row=>row.addEventListener('keydown',e=>{if(e.key==='Enter')openProject(row.dataset.id)}));
+
+/* =========================
+   PROJECT DATA
+========================= */
+
+const projects = [
+
+{
+name:"HYD LULC",
+category:"WEB GIS",
+year:"2025",
+description:
+"Land Use and Land Cover classification of Hyderabad using satellite imagery with interactive web visualization.",
+image:"hyd-lulc.png",
+tags:["HTML","CSS","JavaScript","Leaflet"],
+url:"https://bhagyashreebardhan2001-gif.github.io/HYD_LULC/"
+},
+
+{
+name:"Magarpatta Satellite Explore",
+category:"WEB GIS",
+year:"2025",
+description:
+"An interactive web application to explore and analyze satellite imagery of Magarpatta, Pune with multiple data layers and indices.",
+image:"magarpatta-satellite-explore.png",
+tags:["HTML","CSS","JavaScript","Leaflet"],
+url:"https://bhagyashreebardhan2001-gif.github.io/magarpatta-satellite-explore/"
+},
+
+{
+name:"Geospatial Big Data",
+category:"DATA ANALYSIS",
+year:"2025",
+description:
+"Analysis and visualization of large-scale geospatial data using modern data processing and visualization techniques.",
+image:"geospatial-big-data.svg",
+tags:["Python","Pandas","GeoPandas","Jupyter"],
+url:"https://bhagyashreebardhan2001-gif.github.io/Geospatial_bigdata/"
+},
+
+{
+name:"Earthquakes World",
+category:"WEB GIS",
+year:"2025",
+description:
+"Interactive visualization of global earthquake data with spatial and map-based exploration.",
+image:"earthquakes-world.svg",
+tags:["HTML","CSS","JavaScript","Leaflet"],
+url:"https://bhagyashreebardhan2001-gif.github.io/earthquakes_world/"
 }
-function openProject(id){const p=projects.find(x=>x.id===id);if(!p)return;$('#modalImg').src=p.image;$('#modalImg').alt=p.name;$('#modalCat').textContent=p.category;$('#modalTitle').textContent=p.name;$('#modalMeta').textContent=`${p.year} · GITHUB PROJECT`;$('#modalDesc').textContent=p.desc;$('#modalTags').innerHTML=p.tags.map(t=>`<span>${t}</span>`).join('');$('#modalActions').innerHTML=`<a class="primary" href="${p.url}" target="_blank" rel="noopener">VIEW LIVE PROJECT ↗</a>`;$('#projectModal').classList.add('open');$('#projectModal').setAttribute('aria-hidden','false');document.body.classList.add('lock')}
-function closeProject(){ $('#projectModal').classList.remove('open');$('#projectModal').setAttribute('aria-hidden','true');document.body.classList.remove('lock')}
-$$('[data-close]').forEach(x=>x.addEventListener('click',closeProject));document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeProject();$('#certLightbox').classList.remove('open');document.body.classList.remove('lock')}});
-$$('.filters button').forEach(b=>b.addEventListener('click',()=>{$$('.filters button').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderProjects(b.dataset.filter)}));renderProjects();
-const certGrid=$('#certGrid');certGrid.innerHTML=certificates.map((c,i)=>`<article class="cert"><div class="cert-media ${c.file?'pdf-media':''}" data-cert="${i}">${c.image?`<img src="${c.image}" alt="${c.title} certificate">`:`<span>PDF</span><small>CLICK TO VIEW DOCUMENT</small>`}</div><div class="cert-body"><div class="cert-type">${c.type}</div><h3>${c.title}</h3><p>${c.org}</p><a class="cert-link" href="${c.file||c.image}" target="_blank" rel="noopener">${c.file?'OPEN PDF ↗':'VIEW CERTIFICATE ↗'}</a></div></article>`).join('');
-const lb=$('#certLightbox'), lc=$('#lightboxContent');$$('.cert-media').forEach((el,i)=>el.addEventListener('click',()=>{const c=certificates[i];if(c.file){lc.innerHTML=`<iframe class="pdf-frame" src="${encodeURI(c.file)}#toolbar=1" title="${c.title}"></iframe>`}else{lc.innerHTML=`<img src="${c.image}" alt="${c.title}">`}lb.classList.add('open');document.body.classList.add('lock')}));$('#lightboxClose').addEventListener('click',()=>{lb.classList.remove('open');document.body.classList.remove('lock')});
-const nav=$('#nav'),bar=$('#progressBar');addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>30);bar.style.height=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%'});
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});$$('.section-head,.about-lead,.about-copy p,.toolkit,.education,.project-row,.cert,.achievement,.contact-copy').forEach(el=>{el.classList.add('reveal');obs.observe(el)});
-const cursor=$('#cursor');if(matchMedia('(pointer:fine)').matches){addEventListener('mousemove',e=>{cursor.style.left=e.clientX+'px';cursor.style.top=e.clientY+'px';cursor.classList.add('show')});$$('a,button,.project-row,.cert-media').forEach(el=>{el.addEventListener('mouseenter',()=>cursor.classList.add('view'));el.addEventListener('mouseleave',()=>cursor.classList.remove('view'))})}
-addEventListener('load',()=>setTimeout(()=>$('#loader').classList.add('hide'),550));
+
+];
+
+
+/* =========================
+   CERTIFICATES
+========================= */
+
+const certificates = [
+
+{
+title:"NISAR — ARSET Certificate",
+organization:"NASA ARSET",
+type:"REMOTE SENSING",
+file:"ARSET CERTIFICATE - NISAR_619.pdf"
+},
+
+{
+title:"Intermediate Machine Learning",
+organization:"Kaggle Learn",
+type:"MACHINE LEARNING",
+image:"Intermediate MachineLearning-kaggle.png"
+},
+
+{
+title:"Introduction to Machine Learning",
+organization:"Kaggle Learn",
+type:"MACHINE LEARNING",
+image:"Introduction to MachineLearning-kaggle.png"
+},
+
+{
+title:"Introduction to Pandas",
+organization:"Kaggle Learn",
+type:"PYTHON / DATA ANALYSIS",
+image:"Introduction to Pandas-kaggle.png"
+},
+
+{
+title:"Research Methodology",
+organization:"",
+type:"RESEARCH",
+file:"Research Methodology (2).pdf"
+},
+
+{
+title:"Simplilearn Certificate",
+organization:"Simplilearn",
+type:"PROFESSIONAL LEARNING",
+file:"Simplilearn Certificate (2).pdf"
+}
+
+];
+
+
+/* =========================
+   PROJECT RENDER
+========================= */
+
+const projectList =
+document.getElementById("projectList");
+
+function renderProjects(filter="ALL"){
+
+const filtered =
+filter==="ALL"
+? projects
+: projects.filter(p=>p.category===filter);
+
+projectList.innerHTML =
+filtered.map((p,index)=>`
+
+<article class="project"
+data-index="${projects.indexOf(p)}">
+
+<div class="project-number">
+${String(index+1).padStart(2,"0")}
+</div>
+
+<div class="project-name">
+${p.name}
+</div>
+
+<div class="project-description">
+${p.description}
+</div>
+
+<div class="project-category">
+${p.category}<br>
+${p.year}
+</div>
+
+</article>
+
+`).join("");
+
+document.querySelectorAll(".project").forEach(card=>{
+
+card.addEventListener("click",()=>{
+
+const p =
+projects[card.dataset.index];
+
+document.getElementById("modalImage").src=p.image;
+document.getElementById("modalImage").alt=p.name;
+
+document.getElementById("modalCategory").textContent=p.category;
+
+document.getElementById("modalTitle").textContent=p.name;
+
+document.getElementById("modalDescription").textContent=p.description;
+
+document.getElementById("modalTags").innerHTML =
+p.tags.map(tag=>`<span>${tag}</span>`).join("");
+
+document.getElementById("modalLink").href=p.url;
+
+document.getElementById("projectModal").classList.add("open");
+
+});
+
+});
+
+}
+
+renderProjects();
+
+
+/* =========================
+   PROJECT FILTER
+========================= */
+
+document.querySelectorAll(".filters button")
+.forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+document.querySelectorAll(".filters button")
+.forEach(b=>b.classList.remove("active"));
+
+button.classList.add("active");
+
+renderProjects(button.dataset.filter);
+
+});
+
+});
+
+
+/* =========================
+   CERTIFICATE RENDER
+========================= */
+
+const certGrid =
+document.getElementById("certGrid");
+
+certGrid.innerHTML =
+certificates.map((c,index)=>`
+
+<article class="certificate">
+
+<div class="certificate-image"
+data-index="${index}">
+
+${
+c.image
+?
+`<img src="${c.image}"
+alt="${c.title} certificate">`
+:
+`<div class="pdf">
+<strong>PDF</strong>
+<small>CLICK TO VIEW</small>
+</div>`
+}
+
+</div>
+
+<div class="certificate-body">
+
+<div class="certificate-type">
+${c.type}
+</div>
+
+<h3>
+${c.title}
+</h3>
+
+<p>
+${c.organization}
+</p>
+
+<a
+class="certificate-link"
+href="${c.file || c.image}"
+target="_blank"
+rel="noopener">
+
+${c.file ? "OPEN PDF ↗" : "VIEW CERTIFICATE ↗"}
+
+</a>
+
+</div>
+
+</article>
+
+`).join("");
+
+
+/* =========================
+   CERTIFICATE LIGHTBOX
+========================= */
+
+const lightbox =
+document.getElementById("lightbox");
+
+const lightboxContent =
+document.getElementById("lightboxContent");
+
+document.querySelectorAll(".certificate-image")
+.forEach(card=>{
+
+card.addEventListener("click",()=>{
+
+const certificate =
+certificates[card.dataset.index];
+
+if(certificate.file){
+
+lightboxContent.innerHTML=`
+
+<iframe
+src="${encodeURI(certificate.file)}"
+title="${certificate.title}">
+</iframe>
+
+`;
+
+}else{
+
+lightboxContent.innerHTML=`
+
+<img
+src="${certificate.image}"
+alt="${certificate.title}">
+
+`;
+
+}
+
+lightbox.classList.add("open");
+
+});
+
+});
+
+
+document.getElementById("closeLightbox")
+.addEventListener("click",()=>{
+
+lightbox.classList.remove("open");
+
+});
+
+
+/* =========================
+   PROJECT MODAL CLOSE
+========================= */
+
+document.getElementById("closeProject")
+.addEventListener("click",()=>{
+
+document.getElementById("projectModal")
+.classList.remove("open");
+
+});
+
+
+document.querySelector(".modal-bg")
+.addEventListener("click",()=>{
+
+document.getElementById("projectModal")
+.classList.remove("open");
+
+});
+
+
+/* =========================
+   NAV
+========================= */
+
+window.addEventListener("scroll",()=>{
+
+document.getElementById("nav")
+.classList.toggle(
+"scrolled",
+window.scrollY>40
+);
+
+});
+
+
+/* =========================
+   CURSOR
+========================= */
+
+const cursor=document.createElement("div");
+
+cursor.className="cursor";
+
+cursor.innerHTML="<span>VIEW</span>";
+
+document.body.appendChild(cursor);
+
+if(window.matchMedia("(pointer:fine)").matches){
+
+window.addEventListener("mousemove",e=>{
+
+cursor.style.left=e.clientX+"px";
+cursor.style.top=e.clientY+"px";
+
+cursor.classList.add("show");
+
+});
+
+document.querySelectorAll("a,button,.project,.certificate-image")
+.forEach(el=>{
+
+el.addEventListener("mouseenter",()=>{
+cursor.classList.add("view");
+});
+
+el.addEventListener("mouseleave",()=>{
+cursor.classList.remove("view");
+});
+
+});
+
+}
+
+
+/* =========================
+   LOADER
+========================= */
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+document.getElementById("loader")
+.classList.add("hide");
+
+},900);
+
+});
+
 </script>
+
 </body>
 </html>
