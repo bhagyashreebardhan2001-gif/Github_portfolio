@@ -3,21 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>Bhagyashree Bardhan | Geoinformatics Portfolio</title>
-
 <meta name="description"
 content="Bhagyashree Bardhan — MSc Geoinformatics portfolio featuring GIS, Remote Sensing, WebGIS, GeoAI and geospatial projects.">
-
 <link rel="canonical"
 href="https://bhagyashreebardhan2001-gif.github.io/Github_portfolio/">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
 rel="stylesheet">
-
 <style>
 :root{
     --black:#080909;
@@ -36,15 +30,12 @@ rel="stylesheet">
     --sans:'DM Sans',Arial,sans-serif;
     --mono:'DM Mono',monospace;
 }
-
 *{
     box-sizing:border-box;
 }
-
 html{
     scroll-behavior:smooth;
 }
-
 body{
     margin:0;
     background:var(--black);
@@ -52,34 +43,27 @@ body{
     font-family:var(--sans);
     overflow-x:hidden;
 }
-
 body.lock{
     overflow:hidden;
 }
-
 a{
     color:inherit;
     text-decoration:none;
 }
-
 button{
     font:inherit;
 }
-
 img{
     display:block;
     max-width:100%;
 }
-
 ::selection{
     background:var(--accent);
     color:var(--black);
 }
-
 /* =========================
    LOADER
 ========================= */
-
 .loader{
     position:fixed;
     inset:0;
@@ -89,22 +73,18 @@ img{
     place-items:center;
     transition:.7s ease;
 }
-
 .loader.hide{
     opacity:0;
     visibility:hidden;
 }
-
 .loader-inner{
     text-align:center;
 }
-
 .loader-name{
     font-size:clamp(26px,5vw,70px);
     font-weight:600;
     letter-spacing:-.06em;
 }
-
 .loader-line{
     width:min(320px,60vw);
     height:1px;
@@ -112,7 +92,6 @@ img{
     margin:20px auto;
     overflow:hidden;
 }
-
 .loader-line span{
     display:block;
     height:100%;
@@ -121,22 +100,18 @@ img{
     transform-origin:left;
     animation:loaderLine 1.1s ease forwards;
 }
-
 .loader-small{
     font:500 9px var(--mono);
     letter-spacing:.18em;
     color:var(--muted);
 }
-
 @keyframes loaderLine{
     from{transform:scaleX(0)}
     to{transform:scaleX(1)}
 }
-
 /* =========================
    CURSOR
 ========================= */
-
 .cursor{
     position:fixed;
     width:70px;
@@ -151,21 +126,17 @@ img{
     transform:translate(-50%,-50%) scale(.7);
     transition:.25s ease;
 }
-
 .cursor.show{
     opacity:1;
     transform:translate(-50%,-50%) scale(1);
 }
-
 .cursor.view{
     background:var(--accent);
     color:var(--black);
 }
-
 /* =========================
    NAV
 ========================= */
-
 .nav{
     position:fixed;
     z-index:900;
@@ -179,43 +150,35 @@ img{
     align-items:center;
     transition:.3s ease;
 }
-
 .nav.scrolled{
     background:rgba(8,9,9,.88);
     backdrop-filter:blur(15px);
     border-bottom:1px solid var(--line);
 }
-
 .brand{
     font:500 11px var(--mono);
     letter-spacing:.08em;
 }
-
 .brand b{
     color:var(--accent);
 }
-
 .nav-links{
     display:flex;
     gap:32px;
 }
-
 .nav-links a{
     font:500 9px var(--mono);
     letter-spacing:.12em;
     color:#d4d5d1;
 }
-
 .nav-links a:hover{
     color:var(--accent);
 }
-
 .menu{
     display:none;
     background:none;
     border:0;
 }
-
 .menu i{
     display:block;
     width:24px;
@@ -223,16 +186,13 @@ img{
     background:white;
     margin:6px;
 }
-
 /* =========================
    GENERAL
 ========================= */
-
 .wrap{
     width:min(1400px,90vw);
     margin:auto;
 }
-
 .chapter-top{
     display:flex;
     justify-content:space-between;
@@ -243,29 +203,24 @@ img{
     letter-spacing:.12em;
     color:var(--muted);
 }
-
 .kicker{
     font:500 9px var(--mono);
     letter-spacing:.14em;
     color:var(--accent);
 }
-
 .section-title{
     font-size:clamp(60px,9vw,140px);
     line-height:.82;
     letter-spacing:-.075em;
     margin:70px 0;
 }
-
 .section-title em{
     font-family:var(--serif);
     font-weight:400;
 }
-
 /* =========================
    HERO
 ========================= */
-
 .hero{
     min-height:100svh;
     position:relative;
@@ -276,7 +231,6 @@ img{
         radial-gradient(circle at 75% 25%,rgba(118,224,207,.09),transparent 25%),
         var(--black);
 }
-
 .hero:before{
     content:"";
     position:absolute;
@@ -287,7 +241,6 @@ img{
     background-size:90px 90px;
     mask-image:linear-gradient(to bottom,black,transparent);
 }
-
 .hero:after{
     content:"18.5204° N / 73.8567° E";
     position:absolute;
@@ -297,13 +250,11 @@ img{
     font:500 9px var(--mono);
     letter-spacing:.12em;
 }
-
 .hero-wrap{
     position:relative;
     z-index:2;
     padding-top:90px;
 }
-
 .hero-meta{
     display:flex;
     justify-content:space-between;
@@ -313,38 +264,32 @@ img{
     letter-spacing:.12em;
     color:var(--muted);
 }
-
 .hero-title{
     margin:7vh 0 5vh;
     line-height:.76;
     letter-spacing:-.08em;
 }
-
 .hero-title h1{
     margin:0;
     font-size:clamp(72px,15.5vw,245px);
     font-weight:600;
 }
-
 .hero-title .outline{
     color:transparent;
     -webkit-text-stroke:1px rgba(255,255,255,.7);
 }
-
 .hero-bottom{
     display:grid;
     grid-template-columns:190px 1fr 170px;
     gap:40px;
     align-items:end;
 }
-
 .portrait img{
     width:190px;
     height:245px;
     object-fit:cover;
     filter:grayscale(10%);
 }
-
 .portrait small{
     display:block;
     margin-top:10px;
@@ -352,11 +297,9 @@ img{
     font:500 8px var(--mono);
     letter-spacing:.1em;
 }
-
 .hero-copy{
     max-width:650px;
 }
-
 .hero-copy h2{
     margin:14px 0 28px;
     font-size:clamp(30px,3.8vw,58px);
@@ -364,11 +307,9 @@ img{
     font-weight:500;
     letter-spacing:-.05em;
 }
-
 .hero-copy h2 em{
     font-family:var(--serif);
 }
-
 .hero-link{
     display:inline-block;
     border-bottom:1px solid var(--line);
@@ -376,19 +317,16 @@ img{
     font:500 9px var(--mono);
     letter-spacing:.12em;
 }
-
 .hero-link b{
     color:var(--accent);
     margin-left:10px;
 }
-
 .hero-side{
     color:var(--muted);
     font:500 8px var(--mono);
     line-height:2;
     letter-spacing:.1em;
 }
-
 .scroll-note{
     position:absolute;
     left:5vw;
@@ -398,37 +336,30 @@ img{
     letter-spacing:.13em;
     color:var(--muted);
 }
-
 /* =========================
    ABOUT
 ========================= */
-
 .about{
     background:var(--paper);
     color:var(--black);
     padding:150px 0 130px;
 }
-
 .about .chapter-top{
     border-color:var(--darkline);
     color:#696c68;
 }
-
 .about .kicker{
     color:#527d75;
 }
-
 .about-grid{
     display:grid;
     grid-template-columns:1fr 1.2fr;
     gap:9vw;
 }
-
 .about-lead{
     font:400 clamp(30px,3.4vw,50px) var(--serif);
     line-height:1.02;
 }
-
 .about-copy p{
     color:#494c49;
     font-size:16px;
@@ -436,7 +367,6 @@ img{
     margin:0 0 22px;
     max-width:590px;
 }
-
 .toolkit{
     margin-top:110px;
     padding-top:22px;
@@ -445,105 +375,87 @@ img{
     grid-template-columns:1fr 2fr;
     gap:70px;
 }
-
 .skills{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
     margin-top:18px;
 }
-
 .skills span{
     border:1px solid var(--darkline);
     padding:9px 11px;
     font:500 9px var(--mono);
 }
-
 .journey{
     display:grid;
     grid-template-columns:repeat(5,1fr);
     border-top:1px solid var(--darkline);
     margin-top:18px;
 }
-
 .journey div{
     padding:14px 10px;
     border-right:1px solid var(--darkline);
 }
-
 .journey div:last-child{
     border-right:0;
 }
-
 .journey small{
     color:#858884;
     font:500 8px var(--mono);
 }
-
 .journey strong{
     display:block;
     margin-top:10px;
     font-size:10px;
 }
-
 .education{
     margin-top:100px;
     border-top:1px solid var(--darkline);
 }
-
 .edu{
     display:grid;
     grid-template-columns:150px 1fr;
     padding:25px 0;
     border-bottom:1px solid var(--darkline);
 }
-
 .edu label{
     color:#777a76;
     font:500 9px var(--mono);
 }
-
 .edu h3{
     margin:0;
     font-size:27px;
 }
-
 .edu p{
     margin:6px 0 0;
     color:#6b6e6a;
     font-size:13px;
 }
-
 /* =========================
    PROJECTS
 ========================= */
-
 .projects{
     background:var(--black);
     padding:150px 0 130px;
 }
-
 .project-intro{
     display:flex;
     justify-content:space-between;
     align-items:end;
     gap:40px;
 }
-
 .project-intro p{
     max-width:430px;
     color:var(--muted);
     line-height:1.7;
     font-size:14px;
 }
-
 .filters{
     display:flex;
     flex-wrap:wrap;
     gap:8px;
     margin:50px 0 28px;
 }
-
 .filters button{
     background:transparent;
     color:var(--text);
@@ -553,18 +465,15 @@ img{
     font:500 8px var(--mono);
     letter-spacing:.1em;
 }
-
 .filters button.active,
 .filters button:hover{
     background:var(--accent);
     border-color:var(--accent);
     color:var(--black);
 }
-
 .project-list{
     border-top:1px solid var(--line);
 }
-
 .project{
     display:grid;
     grid-template-columns:65px 1.4fr 1fr 110px;
@@ -575,123 +484,102 @@ img{
     cursor:pointer;
     transition:.35s ease;
 }
-
 .project:hover{
     padding-left:18px;
     padding-right:18px;
     background:rgba(255,255,255,.025);
 }
-
 .project-number{
     color:var(--muted);
     font:500 9px var(--mono);
 }
-
 .project-name{
     font-size:clamp(25px,3vw,45px);
     letter-spacing:-.05em;
 }
-
 .project:hover .project-name{
     color:var(--accent);
 }
-
 .project-description{
     color:var(--muted);
     font-size:12px;
     line-height:1.55;
 }
-
 .project-category{
     text-align:right;
     color:var(--accent);
     font:500 8px var(--mono);
     letter-spacing:.1em;
 }
-
 .spatial{
     margin-top:80px;
     padding:30px;
     border:1px solid var(--line);
 }
-
 .spatial h3{
     font-size:32px;
     margin:10px 0;
     letter-spacing:-.04em;
 }
-
 .spatial p{
     max-width:600px;
     color:var(--muted);
     line-height:1.6;
     font-size:13px;
 }
-
 /* =========================
    CERTIFICATES
 ========================= */
-
 .certificates{
     background:var(--paper2);
     color:var(--black);
     padding:150px 0;
 }
-
 .certificates .chapter-top{
     border-color:var(--darkline);
     color:#6b6d69;
 }
-
 .cert-intro{
     display:grid;
     grid-template-columns:1.2fr .8fr;
     gap:8vw;
     align-items:end;
 }
-
 .cert-intro p{
     color:#5e615d;
     line-height:1.7;
     font-size:14px;
 }
-
 .cert-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:18px;
     margin-top:70px;
 }
-
 .certificate{
     background:var(--white);
     border:1px solid rgba(0,0,0,.12);
     transition:.35s ease;
 }
-
 .certificate:hover{
     transform:translateY(-8px);
     box-shadow:0 25px 60px rgba(0,0,0,.1);
 }
-
 .certificate-image{
     aspect-ratio:4/3;
     background:#d5d2c9;
     overflow:hidden;
     cursor:pointer;
 }
-
 .certificate-image img{
     width:100%;
     height:100%;
     object-fit:cover;
     transition:.5s ease;
 }
-
 .certificate:hover img{
     transform:scale(1.035);
 }
-
 .pdf{
     height:100%;
     display:grid;
@@ -700,11 +588,9 @@ img{
     background:linear-gradient(135deg,#151918,#343b38);
     color:white;
 }
-
 .pdf strong{
     font:400 65px var(--serif);
 }
-
 .pdf small{
     position:absolute;
     bottom:15px;
@@ -712,28 +598,23 @@ img{
     color:var(--accent);
     font:500 8px var(--mono);
 }
-
 .certificate-body{
     padding:22px;
 }
-
 .certificate-type{
     color:#537d75;
     font:500 8px var(--mono);
     letter-spacing:.12em;
 }
-
 .certificate h3{
     font-size:21px;
     line-height:1.1;
     margin:10px 0;
 }
-
 .certificate p{
     color:#6d706c;
     font-size:11px;
 }
-
 .certificate-link{
     display:inline-block;
     margin-top:15px;
@@ -741,33 +622,27 @@ img{
     padding-bottom:6px;
     font:500 8px var(--mono);
 }
-
 /* =========================
    CONTACT
 ========================= */
-
 .contact{
     background:var(--black);
     padding:150px 0;
 }
-
 .contact-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:8vw;
     align-items:end;
 }
-
 .contact-text{
     max-width:470px;
     color:var(--muted);
     line-height:1.7;
 }
-
 .contact-links{
     border-top:1px solid var(--line);
 }
-
 .contact-links a{
     display:flex;
     justify-content:space-between;
@@ -776,11 +651,9 @@ img{
     font:500 10px var(--mono);
     letter-spacing:.1em;
 }
-
 .contact-links a:hover{
     color:var(--accent);
 }
-
 footer{
     border-top:1px solid var(--line);
     background:var(--black);
@@ -792,15 +665,12 @@ footer{
     font:500 8px var(--mono);
     letter-spacing:.1em;
 }
-
 footer strong{
     color:white;
 }
-
 /* =========================
    MODAL
 ========================= */
-
 .modal{
     position:fixed;
     inset:0;
@@ -809,18 +679,15 @@ footer strong{
     place-items:center;
     padding:25px;
 }
-
 .modal.open{
     display:grid;
 }
-
 .modal-bg{
     position:absolute;
     inset:0;
     background:rgba(0,0,0,.8);
     backdrop-filter:blur(12px);
 }
-
 .modal-card{
     position:relative;
     z-index:2;
@@ -832,33 +699,27 @@ footer strong{
     background:var(--paper);
     color:var(--black);
 }
-
 .modal-image{
     min-height:500px;
     background:#151817;
 }
-
 .modal-image img{
     width:100%;
     height:100%;
     object-fit:cover;
 }
-
 .modal-content{
     padding:55px;
 }
-
 .modal-content h2{
     font-size:clamp(40px,4vw,65px);
     line-height:.9;
     letter-spacing:-.06em;
 }
-
 .modal-content p{
     color:#555855;
     line-height:1.7;
 }
-
 .close{
     position:absolute;
     right:15px;
@@ -871,20 +732,17 @@ footer strong{
     cursor:pointer;
     z-index:3;
 }
-
 .modal-tags{
     display:flex;
     flex-wrap:wrap;
     gap:7px;
     margin:25px 0;
 }
-
 .modal-tags span{
     padding:7px 9px;
     border:1px solid var(--darkline);
     font:500 8px var(--mono);
 }
-
 .live-link{
     display:inline-block;
     background:var(--black);
@@ -892,11 +750,9 @@ footer strong{
     padding:13px 16px;
     font:500 8px var(--mono);
 }
-
 /* =========================
    CERTIFICATE LIGHTBOX
 ========================= */
-
 .lightbox{
     position:fixed;
     inset:0;
@@ -906,24 +762,20 @@ footer strong{
     background:rgba(0,0,0,.9);
     padding:25px;
 }
-
 .lightbox.open{
     display:grid;
 }
-
 .lightbox img{
     max-width:92vw;
     max-height:88vh;
     object-fit:contain;
 }
-
 .lightbox iframe{
     width:min(1050px,92vw);
     height:85vh;
     background:white;
     border:0;
 }
-
 .lightbox-close{
     position:absolute;
     right:25px;
@@ -934,162 +786,125 @@ footer strong{
     font-size:35px;
     cursor:pointer;
 }
-
 /* =========================
    MOBILE
 ========================= */
-
 @media(max-width:900px){
-
     .nav-links{
         display:none;
     }
-
     .menu{
         display:block;
     }
-
     .hero-bottom{
         grid-template-columns:140px 1fr;
     }
-
     .hero-side{
         display:none;
     }
-
     .portrait img{
         width:140px;
         height:185px;
     }
-
     .about-grid,
     .cert-intro,
     .contact-grid{
         grid-template-columns:1fr;
     }
-
     .toolkit{
         grid-template-columns:1fr;
     }
-
     .journey{
         grid-template-columns:repeat(2,1fr);
     }
-
     .cert-grid{
         grid-template-columns:repeat(2,1fr);
     }
-
     .project{
         grid-template-columns:45px 1fr 100px;
     }
-
     .project-description{
         display:none;
     }
-
     .modal-card{
         grid-template-columns:1fr;
     }
-
     .modal-image{
         min-height:280px;
         max-height:40vh;
     }
 }
-
 @media(max-width:600px){
-
     .wrap{
         width:88vw;
     }
-
     .nav{
         height:65px;
         padding:0 6vw;
     }
-
     .hero{
         min-height:100svh;
     }
-
     .hero-meta{
         font-size:7px;
     }
-
     .hero-title{
         margin:8vh 0 7vh;
     }
-
     .hero-title h1{
         font-size:20vw;
     }
-
     .hero-bottom{
         grid-template-columns:1fr;
         gap:28px;
     }
-
     .portrait img{
         width:120px;
         height:150px;
     }
-
     .section-title{
         font-size:18vw;
         margin:50px 0;
     }
-
     .about,
     .projects,
     .certificates,
     .contact{
         padding:100px 0;
     }
-
     .journey{
         grid-template-columns:1fr;
     }
-
     .journey div{
         border-right:0;
         border-bottom:1px solid var(--darkline);
     }
-
     .cert-grid{
         grid-template-columns:1fr;
     }
-
     .project{
         grid-template-columns:38px 1fr 65px;
         padding:23px 0;
     }
-
     .project-name{
         font-size:23px;
     }
-
     .project-category{
         font-size:7px;
     }
-
     .contact-grid{
         gap:50px;
     }
-
     footer{
         flex-direction:column;
     }
-
     .cursor{
         display:none;
     }
 }
 </style>
 </head>
-
 <body>
-
 <!-- LOADER -->
 <div class="loader" id="loader">
     <div class="loader-inner">
@@ -1100,134 +915,95 @@ footer strong{
         </div>
     </div>
 </div>
-
 <!-- NAV -->
 <nav class="nav" id="nav">
     <a href="#home" class="brand">
         BHAGYASHREE <b>/ GEO</b>
     </a>
-
     <div class="nav-links">
         <a href="#about">01 ABOUT</a>
         <a href="#projects">02 PROJECTS</a>
         <a href="#certificates">03 CERTIFICATES</a>
         <a href="#contact">CONTACT</a>
     </div>
-
     <button class="menu" aria-label="Menu">
         <i></i>
         <i></i>
     </button>
 </nav>
-
 <main>
-
 <!-- ================= HERO ================= -->
-
 <section class="hero" id="home">
-
 <div class="wrap hero-wrap">
-
     <div class="hero-meta">
         <span>01 / EARTH OBSERVATION PORTFOLIO</span>
         <span>PUNE, INDIA</span>
     </div>
-
     <div class="hero-title">
         <h1>BHAGYASHREE</h1>
         <h1 class="outline">BARDHAN</h1>
     </div>
-
     <div class="hero-bottom">
-
         <div class="portrait">
             <img src="profile.jpg"
                  alt="Bhagyashree Bardhan">
             <small>MSC GEOINFORMATICS / PUNE</small>
         </div>
-
         <div class="hero-copy">
-
             <div class="kicker">
                 GIS · REMOTE SENSING · GEOSPATIAL ANALYSIS
             </div>
-
             <h2>
                 I work with spatial data to understand
                 <em>real places.</em>
             </h2>
-
             <a href="#about" class="hero-link">
                 DISCOVER THE PERSON ↓
             </a>
-
         </div>
-
         <div class="hero-side">
             EARTH OBSERVATION<br>
             SPATIAL DATA<br>
             URBAN SYSTEMS<br>
             FIELD + DIGITAL
         </div>
-
     </div>
-
 </div>
-
 <div class="scroll-note">
     SCROLL TO EXPLORE
 </div>
-
 </section>
-
-
 <!-- ================= ABOUT ================= -->
-
 <section class="about" id="about">
-
 <div class="wrap">
-
 <div class="chapter-top">
     <span>02 / ABOUT ME</span>
     <span>FROM GEOGRAPHY → GEOINFORMATICS</span>
 </div>
-
 <h2 class="section-title">
     I read landscapes<br>
     <em>through data.</em>
 </h2>
-
 <div class="about-grid">
-
 <div class="about-lead">
     Geography gave me a way to look at places.
     Geoinformatics gave me the tools to investigate them.
 </div>
-
 <div class="about-copy">
-
 <p>
 I am an MSc Geoinformatics student at Bharati Vidyapeeth Institute of Environment, Education and Research, Pune, with a background in Geography.
 </p>
-
 <p>
 My work moves across GIS, satellite remote sensing, Google Earth Engine, QGIS, ArcGIS Pro, Python, GeoAI, WebGIS and spatial analysis.
 </p>
-
 <p>
 I am particularly interested in urban environments, mobility, Earth observation, landscape analysis, spatial data and geospatial technology.
 </p>
-
 </div>
-
 </div>
-
 <div class="toolkit">
-
 <div>
-
 <div class="kicker">THE TOOLKIT</div>
-
 <div class="skills">
 <span>GIS & SPATIAL ANALYSIS</span>
 <span>REMOTE SENSING</span>
@@ -1240,50 +1016,35 @@ I am particularly interested in urban environments, mobility, Earth observation,
 <span>SPATIAL DATABASES</span>
 <span>DATA VISUALIZATION</span>
 </div>
-
 </div>
-
 <div>
-
 <div class="kicker">THE JOURNEY</div>
-
 <div class="journey">
-
 <div>
 <small>01</small>
 <strong>GEOGRAPHY</strong>
 </div>
-
 <div>
 <small>02</small>
 <strong>GIS</strong>
 </div>
-
 <div>
 <small>03</small>
 <strong>REMOTE SENSING</strong>
 </div>
-
 <div>
 <small>04</small>
 <strong>GEOINFORMATICS</strong>
 </div>
-
 <div>
 <small>05</small>
 <strong>GEOAI / SPATIAL RESEARCH</strong>
 </div>
-
 </div>
-
 </div>
-
 </div>
-
 <div class="education">
-
 <div class="kicker">EDUCATION</div>
-
 <div class="edu">
 <label>MSC</label>
 <div>
@@ -1291,7 +1052,6 @@ I am particularly interested in urban environments, mobility, Earth observation,
 <p>Bharati Vidyapeeth Institute of Environment, Education and Research</p>
 </div>
 </div>
-
 <div class="edu">
 <label>DEGREE</label>
 <div>
@@ -1299,7 +1059,6 @@ I am particularly interested in urban environments, mobility, Earth observation,
 <p>North Bengal St. Xavier's College</p>
 </div>
 </div>
-
 <div class="edu">
 <label>SCHOOL</label>
 <div>
@@ -1307,237 +1066,152 @@ I am particularly interested in urban environments, mobility, Earth observation,
 <p>Army Public School, Sukna</p>
 </div>
 </div>
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- ================= PROJECTS ================= -->
-
 <section class="projects" id="projects">
-
 <div class="wrap">
-
 <div class="chapter-top">
 <span>03 / GITHUB PROJECTS</span>
 <span>ONLY SELECTED LIVE PROJECTS</span>
 </div>
-
 <div class="project-intro">
-
 <h2 class="section-title">
 The <em>work.</em>
 </h2>
-
 <p>
 A visual index of my GitHub projects — interactive maps,
 geospatial data analysis and Earth-observation applications.
 </p>
-
 </div>
-
 <div class="filters">
-
 <button class="active" data-filter="ALL">
 ALL
 </button>
-
 <button data-filter="WEB GIS">
 WEB GIS
 </button>
-
 <button data-filter="DATA ANALYSIS">
 DATA ANALYSIS
 </button>
-
 </div>
-
 <div class="project-list" id="projectList"></div>
-
 <div class="spatial">
-
 <div class="kicker">
 SPATIAL INDEX
 </div>
-
 <h3>
 Four projects. One spatial practice.
 </h3>
-
 <p>
 From Hyderabad land-cover mapping and Magarpatta satellite exploration
 to geospatial big-data analysis and global earthquake visualization.
 </p>
-
 </div>
-
 </div>
-
 </section>
-
-
 <!-- ================= CERTIFICATES ================= -->
-
 <section class="certificates" id="certificates">
-
 <div class="wrap">
-
 <div class="chapter-top">
 <span>04 / PROFESSIONAL ARCHIVE</span>
 <span>LEARNING + CERTIFICATION</span>
 </div>
-
 <div class="cert-intro">
-
 <h2 class="section-title">
 Certificates<br>
 <em>& achievements.</em>
 </h2>
-
 <p>
 A curated archive of certificates currently present in the portfolio repository.
 Click an image to view it larger or open the original PDF.
 </p>
-
 </div>
-
 <div class="cert-grid" id="certGrid"></div>
-
 </div>
-
 </section>
-
-
 <!-- ================= CONTACT ================= -->
-
 <section class="contact" id="contact">
-
 <div class="wrap">
-
 <div class="chapter-top">
 <span>05 / CONTACT</span>
 <span>LET'S CONNECT</span>
 </div>
-
 <h2 class="section-title">
 Let's map something<br>
 <em>meaningful.</em>
 </h2>
-
 <div class="contact-grid">
-
 <div class="contact-text">
 Interested in GIS, remote sensing, geospatial analysis,
 urban systems or spatial data projects?
 Explore my work and connect through the links below.
 </div>
-
 <div class="contact-links">
+    <a href="https://github.com/bhagyashreebardhan2001-gif"
+       target="_blank"
+       rel="noopener">
+        GITHUB <b>↗</b>
+    </a>
 
-<a href="https://github.com/bhagyashreebardhan2001-gif"
-target="_blank"
-rel="noopener">
-GITHUB <b>↗</b>
-</a>
+    <a href="https://www.linkedin.com/in/bhagyashree-bardhan-386299200"
+       target="_blank"
+       rel="noopener">
+        LINKEDIN <b>↗</b>
+    </a>
 
-<a href="https://linkedin.com/in/your-username"
-target="_blank"
-rel="noopener">
-LINKEDIN <b>↗</b>
-</a>
-
-<a href="mailto:your-email@example.com">
-EMAIL <b>↗</b>
-</a>
-
+    <a href="mailto:bhagyashreebardhan2001@gmail.com">
+        EMAIL <b>↗</b>
+    </a>
 </div>
-
 </div>
-
 </div>
-
 </section>
-
 </main>
-
-
 <footer>
-
 <strong>BHAGYASHREE BARDHAN</strong>
-
 <span>
 GIS · REMOTE SENSING · GEOSPATIAL ANALYSIS · PUNE, INDIA
 </span>
-
 <span>
 THERE'S ALWAYS ANOTHER LAYER TO EXPLORE.
 </span>
-
 </footer>
-
-
 <!-- PROJECT MODAL -->
-
 <div class="modal" id="projectModal">
-
 <div class="modal-bg"></div>
-
 <div class="modal-card">
-
 <button class="close" id="closeProject">×</button>
-
 <div class="modal-image">
 <img id="modalImage" alt="">
 </div>
-
 <div class="modal-content">
-
 <div class="kicker" id="modalCategory"></div>
-
 <h2 id="modalTitle"></h2>
-
 <p id="modalDescription"></p>
-
 <div class="modal-tags" id="modalTags"></div>
-
 <a id="modalLink"
 class="live-link"
 target="_blank"
 rel="noopener">
 VIEW LIVE PROJECT ↗
 </a>
-
 </div>
-
 </div>
-
 </div>
-
-
 <!-- CERTIFICATE LIGHTBOX -->
-
 <div class="lightbox" id="lightbox">
-
 <button class="lightbox-close" id="closeLightbox">
 ×
 </button>
-
 <div id="lightboxContent"></div>
-
 </div>
-
-
 <script>
-
 /* =========================
    PROJECT DATA
 ========================= */
-
 const projects = [
-
 {
 name:"HYD LULC",
 category:"WEB GIS",
@@ -1548,7 +1222,6 @@ image:"hyd-lulc.png",
 tags:["HTML","CSS","JavaScript","Leaflet"],
 url:"https://bhagyashreebardhan2001-gif.github.io/HYD_LULC/"
 },
-
 {
 name:"Magarpatta Satellite Explore",
 category:"WEB GIS",
@@ -1559,7 +1232,6 @@ image:"magarpatta-satellite-explore.png",
 tags:["HTML","CSS","JavaScript","Leaflet"],
 url:"https://bhagyashreebardhan2001-gif.github.io/magarpatta-satellite-explore/"
 },
-
 {
 name:"Geospatial Big Data",
 category:"DATA ANALYSIS",
@@ -1570,7 +1242,6 @@ image:"geospatial-big-data.svg",
 tags:["Python","Pandas","GeoPandas","Jupyter"],
 url:"https://bhagyashreebardhan2001-gif.github.io/Geospatial_bigdata/"
 },
-
 {
 name:"Earthquakes World",
 category:"WEB GIS",
@@ -1581,170 +1252,116 @@ image:"earthquakes-world.svg",
 tags:["HTML","CSS","JavaScript","Leaflet"],
 url:"https://bhagyashreebardhan2001-gif.github.io/earthquakes_world/"
 }
-
 ];
-
-
 /* =========================
    CERTIFICATES
 ========================= */
-
 const certificates = [
-
 {
 title:"NISAR — ARSET Certificate",
 organization:"NASA ARSET",
 type:"REMOTE SENSING",
 file:"ARSET CERTIFICATE - NISAR_619.pdf"
 },
-
 {
 title:"Intermediate Machine Learning",
 organization:"Kaggle Learn",
 type:"MACHINE LEARNING",
 image:"Intermediate MachineLearning-kaggle.png"
 },
-
 {
 title:"Introduction to Machine Learning",
 organization:"Kaggle Learn",
 type:"MACHINE LEARNING",
 image:"Introduction to MachineLearning-kaggle.png"
 },
-
 {
 title:"Introduction to Pandas",
 organization:"Kaggle Learn",
 type:"PYTHON / DATA ANALYSIS",
 image:"Introduction to Pandas-kaggle.png"
 },
-
 {
 title:"Research Methodology",
 organization:"",
 type:"RESEARCH",
 file:"Research Methodology (2).pdf"
 },
-
 {
 title:"Simplilearn Certificate",
 organization:"Simplilearn",
 type:"PROFESSIONAL LEARNING",
 file:"Simplilearn Certificate (2).pdf"
 }
-
 ];
-
-
 /* =========================
    PROJECT RENDER
 ========================= */
-
 const projectList =
 document.getElementById("projectList");
-
 function renderProjects(filter="ALL"){
-
 const filtered =
 filter==="ALL"
 ? projects
 : projects.filter(p=>p.category===filter);
-
 projectList.innerHTML =
 filtered.map((p,index)=>`
-
 <article class="project"
 data-index="${projects.indexOf(p)}">
-
 <div class="project-number">
 ${String(index+1).padStart(2,"0")}
 </div>
-
 <div class="project-name">
 ${p.name}
 </div>
-
 <div class="project-description">
 ${p.description}
 </div>
-
 <div class="project-category">
 ${p.category}<br>
 ${p.year}
 </div>
-
 </article>
-
 `).join("");
-
 document.querySelectorAll(".project").forEach(card=>{
-
 card.addEventListener("click",()=>{
-
 const p =
 projects[card.dataset.index];
-
 document.getElementById("modalImage").src=p.image;
 document.getElementById("modalImage").alt=p.name;
-
 document.getElementById("modalCategory").textContent=p.category;
-
 document.getElementById("modalTitle").textContent=p.name;
-
 document.getElementById("modalDescription").textContent=p.description;
-
 document.getElementById("modalTags").innerHTML =
 p.tags.map(tag=>`<span>${tag}</span>`).join("");
-
 document.getElementById("modalLink").href=p.url;
-
 document.getElementById("projectModal").classList.add("open");
-
 });
-
 });
-
 }
-
 renderProjects();
-
-
 /* =========================
    PROJECT FILTER
 ========================= */
-
 document.querySelectorAll(".filters button")
 .forEach(button=>{
-
 button.addEventListener("click",()=>{
-
 document.querySelectorAll(".filters button")
 .forEach(b=>b.classList.remove("active"));
-
 button.classList.add("active");
-
 renderProjects(button.dataset.filter);
-
 });
-
 });
-
-
 /* =========================
    CERTIFICATE RENDER
 ========================= */
-
 const certGrid =
 document.getElementById("certGrid");
-
 certGrid.innerHTML =
 certificates.map((c,index)=>`
-
 <article class="certificate">
-
 <div class="certificate-image"
 data-index="${index}">
-
 ${
 c.image
 ?
@@ -1756,188 +1373,115 @@ alt="${c.title} certificate">`
 <small>CLICK TO VIEW</small>
 </div>`
 }
-
 </div>
-
 <div class="certificate-body">
-
 <div class="certificate-type">
 ${c.type}
 </div>
-
 <h3>
 ${c.title}
 </h3>
-
 <p>
 ${c.organization}
 </p>
-
 <a
 class="certificate-link"
 href="${c.file || c.image}"
 target="_blank"
 rel="noopener">
-
 ${c.file ? "OPEN PDF ↗" : "VIEW CERTIFICATE ↗"}
-
 </a>
-
 </div>
-
 </article>
-
 `).join("");
-
-
 /* =========================
    CERTIFICATE LIGHTBOX
 ========================= */
-
 const lightbox =
 document.getElementById("lightbox");
-
 const lightboxContent =
 document.getElementById("lightboxContent");
-
 document.querySelectorAll(".certificate-image")
 .forEach(card=>{
-
 card.addEventListener("click",()=>{
-
 const certificate =
 certificates[card.dataset.index];
-
 if(certificate.file){
-
 lightboxContent.innerHTML=`
-
 <iframe
 src="${encodeURI(certificate.file)}"
 title="${certificate.title}">
 </iframe>
-
 `;
-
 }else{
-
 lightboxContent.innerHTML=`
-
 <img
 src="${certificate.image}"
 alt="${certificate.title}">
-
 `;
-
 }
-
 lightbox.classList.add("open");
-
 });
-
 });
-
-
 document.getElementById("closeLightbox")
 .addEventListener("click",()=>{
-
 lightbox.classList.remove("open");
-
 });
-
-
 /* =========================
    PROJECT MODAL CLOSE
 ========================= */
-
 document.getElementById("closeProject")
 .addEventListener("click",()=>{
-
 document.getElementById("projectModal")
 .classList.remove("open");
-
 });
-
-
 document.querySelector(".modal-bg")
 .addEventListener("click",()=>{
-
 document.getElementById("projectModal")
 .classList.remove("open");
-
 });
-
-
 /* =========================
    NAV
 ========================= */
-
 window.addEventListener("scroll",()=>{
-
 document.getElementById("nav")
 .classList.toggle(
 "scrolled",
 window.scrollY>40
 );
-
 });
-
-
 /* =========================
    CURSOR
 ========================= */
-
 const cursor=document.createElement("div");
-
 cursor.className="cursor";
-
 cursor.innerHTML="<span>VIEW</span>";
-
 document.body.appendChild(cursor);
-
 if(window.matchMedia("(pointer:fine)").matches){
-
 window.addEventListener("mousemove",e=>{
-
 cursor.style.left=e.clientX+"px";
 cursor.style.top=e.clientY+"px";
-
 cursor.classList.add("show");
-
 });
-
 document.querySelectorAll("a,button,.project,.certificate-image")
 .forEach(el=>{
-
 el.addEventListener("mouseenter",()=>{
 cursor.classList.add("view");
 });
-
 el.addEventListener("mouseleave",()=>{
 cursor.classList.remove("view");
 });
-
 });
-
 }
-
-
 /* =========================
    LOADER
 ========================= */
-
 window.addEventListener("load",()=>{
-
 setTimeout(()=>{
-
 document.getElementById("loader")
 .classList.add("hide");
-
 },900);
-
 });
-
 </script>
-
 </body>
 </html>
